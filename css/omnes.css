@@ -1,0 +1,12 @@
+#top-pane h1 {
+  font-family: "omnes-pro", sans-serif;
+  font-size: 760%;
+  padding-top: 45px;
+}
+.call-to-action a {
+  font-family: "omnes-pro", sans-serif;
+  font-size: 132%;
+}
+.call-to-action a strong {
+  font-weight: 500;
+}
