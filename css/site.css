@@ -139,8 +139,9 @@ nav.top-pane li.icon img.black {
   font-family: "adelle";
   font-style: italic;
   text-transform: lowercase;
-  font-size: 262%;
+  font-size: 259%;
   font-weight: 200;
+  letter-spacing: 0.03em;
 }
 #top-pane header p {
   font-family: "adelle";
