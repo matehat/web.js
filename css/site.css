@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+[hidden] { display: none; }
+
+div.container {
+  width: 1000px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#top-pane {
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transition-property: none;
+  transition-timing-function: ease;
+  background-image: -webkit-gradient(linear, 50% top, 50% bottom, from(transparent), to(rgba(0,0,0,0.5))), url(/img/class.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: 98%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+#top-pane:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+nav.top-pane {
+  position: fixed;
+  top: 10px;
+}
+nav.top-pane li.icon img {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  left: 0;
+}
+
+nav.top-pane li.icon {
+  list-style: none;
+}
+
+nav.top-pane li.icon img.white,
+nav.top-pane.anchored li.icon img.black,
+nav.top-pane li.icon:hover img.colored {
+  opacity: 1;
+}
+
+nav.top-pane li.icon img.colored,
+nav.top-pane.anchored li.icon:hover img.white,
+nav.top-pane.anchored li.icon:hover img.black,
+nav.top-pane li.icon img.black {
+  opacity: 0;
+}
+
+#top-pane header {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+/*  -webkit-transform: scale(1.4, 1.4);*/
+}
+#top-pane header h1,
+#top-pane header h2,
+#top-pane header p {
+  color: white;
+  text-align: left;
+  margin-left: 225px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2),0 2px 3px rgba(0,0,0,0.1),0 0 64px rgba(0,0,0,0.15);
+}
+#top-pane header h1 {
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-size: 700%;
+  font-weight: 400;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+#top-pane header h1 span:nth-child(3) {
+  letter-spacing: 0.07em;
+}
+#top-pane header h2 {
+  font-family: "adelle";
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 262%;
+}
+#top-pane header p {
+  font-family: "brandon-grotesque";
+  font-size: 160%;
+  margin: 0;
+  clear: left;
+  text-align: center;
+  font-style: italic;
+}
+
+header.hero img {
+  height: 300px;
+  width: 225px;
+  float: left;
+  margin-bottom: 50px;
+}
+.call-to-action {
+  margin-top: 40px;
+}
+.call-to-action a {
+  display: inline-block;
+  color: white;
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid rgba(255,255,255,0.2);;
+  border-radius: 2px;
+  font-size: 120%;
+  font-weight: bold;
+  
+  transition-property: border, background-color, color;
+  transition-duration: 0.3s;
+}
+.call-to-action a:first-child {
+  margin-right: 10px;
+}
+.call-to-action a:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
