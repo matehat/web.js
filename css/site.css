@@ -161,7 +161,7 @@ header.hero img {
 }
 .call-to-action a {
   display: inline-block;
-  color: white;
+  color: rgba(255,255,255,0.6);
   font-family: "brandon-grotesque";
   text-transform: uppercase;
   text-decoration: none;
@@ -169,8 +169,14 @@ header.hero img {
   border: 2px solid rgba(255,255,255,0.2);;
   border-radius: 2px;
   font-size: 120%;
-  font-weight: bold;
+/*  font-weight: bold;*/
   transition-property: border, background-color, color;
+  transition-duration: 0.2s;
+}
+.call-to-action a strong {
+  font-weight: bold;
+  color: white;
+  transition-property: color;
   transition-duration: 0.2s;
 }
 .call-to-action a:first-child {
@@ -179,6 +185,9 @@ header.hero img {
 .call-to-action a:hover {
   background-color: white;
   border-color: white;
+  color: black;
+}
+.call-to-action a:hover strong {
   color: black;
 }
 .call-to-action a[href="#apprenez"]:hover {
