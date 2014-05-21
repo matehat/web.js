@@ -122,7 +122,8 @@ nav.top-pane li.icon img.black {
   color: white;
   text-align: left;
   margin-left: 225px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2),0 2px 3px rgba(0,0,0,0.1),0 0 64px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2), 
+               0 2px 3px rgba(0,0,0,0.1);
 }
 #top-pane header h1 {
   font-family: "brandon-grotesque", sans-serif;
