@@ -365,6 +365,7 @@ div#main #what-we-do article header {
   margin: auto;
   vertical-align: middle;
   position: relative;
+  top: 0;
   transition-property: top;
   transition-duration: 0.2s;
 }
