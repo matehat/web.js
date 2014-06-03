@@ -72,6 +72,7 @@ body {
   left: 0;
   top: 0;
   text-align: center;
+  z-index: 150;
 }
 #top-pane:after {
   content: "";
@@ -80,33 +81,86 @@ body {
   height: 100%;
 }
 
-nav.top-pane {
+a#top-icon {
   position: fixed;
   top: 10px;
+  z-index: 250;
+  font-family: brandon-grotesque;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-indent: 60px;
+  font-size: 32px;
+  line-height: 64px;
+  color: transparent;
 }
-nav.top-pane li.icon img {
+body.anchored #top-icon {
+  color: black;
+}
+a#top-icon img {
   transition-property: opacity;
   transition-duration: 0.3s;
   height: 64px;
   width: 64px;
   position: absolute;
   left: 0;
+  z-index: 200;
 }
 
-nav.top-pane li.icon {
+body.anchored > nav {
+  opacity: 1;
+}
+body > nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 200;
+  opacity: 0;
+  border-bottom: 2px solid white;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+body > nav ul {
+  height: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+body > nav ul li {
   list-style: none;
+  float: left;
+  font-size: 160%;
+  font-family: adelle;
+  line-height: 64px;
+  margin: 10px; 
+  border-bottom: 2px solid transparent;
+  transition-property: border-color;
+  transition-duration: 0.2s;
+}
+body > nav ul li:hover {
+  border-bottom-color: #333;
 }
 
-nav.top-pane li.icon img.white,
-nav.top-pane.anchored li.icon img.black,
-nav.top-pane li.icon:hover img.colored {
+body > nav ul li a {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a#top-icon img.white,
+body.anchored a#top-icon img.black,
+a#top-icon:hover img.colored {
   opacity: 1;
 }
 
-nav.top-pane li.icon img.colored,
-nav.top-pane.anchored li.icon:hover img.white,
-nav.top-pane.anchored li.icon:hover img.black,
-nav.top-pane li.icon img.black {
+body a#top-icon img.colored,
+body.anchored a#top-icon:hover img.white,
+body.anchored a#top-icon:hover img.black,
+a#top-icon img.black {
   opacity: 0;
 }
 
@@ -201,4 +255,200 @@ header.hero img {
 .call-to-action a[href="#enseignez"]:hover {
   background-color: #3BBAE5;
   border-color: #3BBAE5;
+}
+
+div#main {
+  position: absolute;
+  top: 98%;
+  width: 100%;
+}
+
+div#main #who-we-are {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+div#main #who-we-are i.icon {
+  float: left;
+  font-size: 160px;
+  margin: 10px 0 0 40px;
+  color: #65BA59;
+}
+div#main #who-we-are h1 {
+  font-family: "brandon-grotesque";
+  font-size: 230%;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-left: 260px
+}
+div#main #who-we-are h1 strong {
+  font-weight: 500;
+}
+
+div#main #who-we-are p {
+  margin-left: 260px;
+  font-family: "adelle";
+  line-height: 150%;
+  font-size: 120%;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+div#main #who-we-are p.bref {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 130%;
+  margin-bottom: 0;
+}
+
+div#main #who-we-are p.bref strong {
+  color: #65BA59;
+}
+
+div#main #what-we-do {
+  width: 100%;
+  height: 600px;
+  background-image: url(/img/teach.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+div#main #what-we-do article {
+  position: relative;
+  width: 50%;
+  float: left;
+  height: 600px;
+  transition-property: background;
+  transition-duration: 0.2s;
+  text-align: center;
+}
+
+div#main #what-we-do article#enseignez {
+  background-color: rgba(0,0,0,0.2);
+}
+
+div#main #what-we-do article#apprenez:hover {
+  background-color: #65BA59;
+}
+div#main #what-we-do article#enseignez:hover {
+  background-color: #3BBAE5;
+}
+
+div#main #what-we-do article header {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  vertical-align: middle;
+}
+
+div#main #what-we-do article:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+div#main #what-we-do article h1 {
+  font-family: brandon-grotesque;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  font-size: 400%;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+}
+
+div#main #what-we-do article .details {
+  opacity: 0;
+  position: relative;
+  transition-delay: 0.2s;
+  transition-property: opacity,top;
+  transition-duration: 0.2s;
+  color: white;
+  text-decoration: none;
+  font-family: "adelle";
+}
+
+div#main #what-we-do article:hover .details {
+  opacity: 0.6;
+  top: 10px;
+  transition-delay: 0s;
+}
+
+div#main #what-we-do article header i {
+  color: white;
+  font-size: 100px;
+}
+
+#equipe > ul {
+  margin-top: 30px;
+  font-size: 0px;
+}
+
+#equipe > ul li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#equipe > ul li i {
+  font-size: 600%;
+  margin-bottom: 10px;
+  color: #3BBAE5;
+}
+
+#equipe > ul li h1 {
+  font-family: adelle;
+  font-weight: 800;
+  font-size: 120%;
+  margin-bottom: 20px;
+  line-height: 125%;
+}
+
+#equipe > ul li p {
+  font-family: adelle;
+  font-style: italic;
+  line-height: 125%;
+  color: #666;
+}
+
+#equipe > p {
+  font-family: adelle;
+  color: #555;
+  font-size: 120%;
+  text-align: center;
+}
+
+#equipe > p em {
+  font-style: italic;
+  color: #3BBAE5;
+}
+
+#equipe > h1 {
+  font-family: brandon-grotesque;
+  font-size: 230%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#equipe {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  font-family: adelle;
+  font-size: 90%;
+  color: white;
+  text-align: center;
 }
