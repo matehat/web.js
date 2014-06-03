@@ -20,5 +20,13 @@ $(function () {
     e.preventDefault();
     console.log($(this).closest('#what-we-do'), $(this).attr('id'))
     $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
+  });
+  
+  ['apprenez', 'enseignez'].forEach(function (anchor) {
+    $('body a[href="#'+ anchor +'"]').click(function (ev) {
+      ev.preventDefault();
+      $('#what-we-do').attr('data-active', anchor);
+      $(window).scrollTop($('#what-we-do').offset().top - 84);
+    })
   })
 });
