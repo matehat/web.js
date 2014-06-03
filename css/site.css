@@ -395,6 +395,7 @@ div#main #what-we-do article .details {
   transition-property: opacity,top;
   transition-duration: 0.2s;
   color: white;
+  top: 0;
   text-decoration: none;
   font-family: "adelle";
 }
