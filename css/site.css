@@ -330,11 +330,13 @@ div#main #what-we-do[data-active="enseignez"] article#enseignez,
 div#main #what-we-do[data-active="apprenez"] article#apprenez {
   width: 65%;
 }
-div#main #what-we-do[data-active="enseignez"] article#enseignez {
-  background-color: #3BBAE5;
+div#main #what-we-do[data-active="enseignez"] article#enseignez,
+div#main #what-we-do article#enseignez:hover {
+  background-color: rgba(59, 186, 229, 0.8);
 }
-div#main #what-we-do[data-active="apprenez"] article#apprenez {
-  background-color: #65BA59;
+div#main #what-we-do[data-active="apprenez"] article#apprenez,
+div#main #what-we-do article#apprenez:hover {
+  background-color: rgba(101, 186, 89, 0.8);
 }
 div#main #what-we-do[data-active="apprenez"] article#enseignez,
 div#main #what-we-do[data-active="enseignez"] article#apprenez {
@@ -355,13 +357,6 @@ div#main #what-we-do[data-active="apprenez"] article#apprenez .details {
 
 div#main #what-we-do article#enseignez {
   background-color: rgba(0,0,0,0.2);
-}
-
-div#main #what-we-do article#apprenez:hover {
-  background-color: #65BA59;
-}
-div#main #what-we-do article#enseignez:hover {
-  background-color: #3BBAE5;
 }
 
 div#main #what-we-do article header {
