@@ -14,3 +14,11 @@
     }
   }
 })();
+
+$(function () {
+  $('div#main #what-we-do article').click(function (e) {
+    e.preventDefault();
+    console.log($(this).closest('#what-we-do'), $(this).attr('id'))
+    $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
+  })
+});

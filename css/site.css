@@ -116,12 +116,12 @@ body > nav {
   right: 0;
   height: 84px;
   background-color: rgba(255,255,255,0.9);
-  z-index: 200;
-  opacity: 0;
+  z-index: 100;
+/*  opacity: 0;*/
   border-bottom: 2px solid white;
   text-align: center;
-  transition-duration: 0.3s;
-  transition-property: opacity;
+/*  transition-duration: 0.3s;*/
+/*  transition-property: opacity;*/
 }
 
 body > nav ul {
@@ -320,9 +320,37 @@ div#main #what-we-do article {
   width: 50%;
   float: left;
   height: 600px;
-  transition-property: background;
+  transition-property: background,width;
   transition-duration: 0.2s;
   text-align: center;
+  cursor: pointer;
+}
+
+div#main #what-we-do[data-active="enseignez"] article#enseignez,
+div#main #what-we-do[data-active="apprenez"] article#apprenez {
+  width: 65%;
+}
+div#main #what-we-do[data-active="enseignez"] article#enseignez {
+  background-color: #3BBAE5;
+}
+div#main #what-we-do[data-active="apprenez"] article#apprenez {
+  background-color: #65BA59;
+}
+div#main #what-we-do[data-active="apprenez"] article#enseignez,
+div#main #what-we-do[data-active="enseignez"] article#apprenez {
+  width: 35%;
+}
+
+div#main #what-we-do[data-active="enseignez"] article#enseignez header,
+div#main #what-we-do[data-active="apprenez"] article#apprenez header {
+  top: -250px;
+}
+
+div#main #what-we-do[data-active="enseignez"] article#enseignez header i,
+div#main #what-we-do[data-active="apprenez"] article#apprenez header i,
+div#main #what-we-do[data-active="enseignez"] article#enseignez .details,
+div#main #what-we-do[data-active="apprenez"] article#apprenez .details {
+  opacity: 0;
 }
 
 div#main #what-we-do article#enseignez {
@@ -341,6 +369,9 @@ div#main #what-we-do article header {
   display: inline-block;
   margin: auto;
   vertical-align: middle;
+  position: relative;
+  transition-property: top;
+  transition-duration: 0.2s;
 }
 
 div#main #what-we-do article:after {
@@ -381,6 +412,8 @@ div#main #what-we-do article:hover .details {
 div#main #what-we-do article header i {
   color: white;
   font-size: 100px;
+  transition-property: opacity;
+  transition-duration: 0.2s;
 }
 
 #equipe > ul {
