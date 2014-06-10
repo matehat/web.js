@@ -68,6 +68,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 98%;
+  min-height: 600px;
   position: absolute;
   left: 0;
   top: 0;
@@ -88,9 +89,9 @@ a#top-icon {
   font-family: brandon-grotesque;
   text-transform: uppercase;
   text-decoration: none;
-  text-indent: 60px;
-  font-size: 32px;
-  line-height: 64px;
+  text-indent: 50px;
+  font-size: 24px;
+  line-height: 48px;
   color: transparent;
 }
 body.anchored #top-icon {
@@ -99,50 +100,52 @@ body.anchored #top-icon {
 a#top-icon img {
   transition-property: opacity;
   transition-duration: 0.3s;
-  height: 64px;
-  width: 64px;
+  height: 48px;
+  width: 48px;
   position: absolute;
   left: 0;
   z-index: 200;
 }
 
-body.anchored > nav {
-  opacity: 1;
-}
 body > nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 84px;
+  height: 68px;
   background-color: rgba(255,255,255,0.9);
-  z-index: 100;
+  z-index: 200;
 /*  opacity: 0;*/
-  border-bottom: 2px solid white;
-  text-align: center;
-/*  transition-duration: 0.3s;*/
-/*  transition-property: opacity;*/
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  text-align: right;
 }
 
 body > nav ul {
   height: 100%;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 32px 0 0;
 }
 
 body > nav ul li {
   list-style: none;
   float: left;
-  font-size: 160%;
+  font-size: 120%;
   font-family: adelle;
-  line-height: 64px;
+  line-height: 48px;
   margin: 10px; 
   border-bottom: 2px solid transparent;
   transition-property: border-color;
   transition-duration: 0.2s;
+  margin-right: 10px;
+}
+body > nav ul li.separator {
+  color: #999;
 }
 body > nav ul li:hover {
   border-bottom-color: #333;
+}
+body > nav ul li.separator:hover {
+  border-bottom-color: transparent;
 }
 
 body > nav ul li a {
@@ -330,12 +333,14 @@ div#main #what-we-do[data-active="enseignez"] article#enseignez,
 div#main #what-we-do[data-active="apprenez"] article#apprenez {
   width: 65%;
 }
-div#main #what-we-do[data-active="enseignez"] article#enseignez,
-div#main #what-we-do article#enseignez:hover {
+div#main #what-we-do article#enseignez:hover,
+div#main #what-we-do article#apprenez:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+div#main #what-we-do[data-active="enseignez"] article#enseignez {
   background-color: rgba(59, 186, 229, 0.8);
 }
-div#main #what-we-do[data-active="apprenez"] article#apprenez,
-div#main #what-we-do article#apprenez:hover {
+div#main #what-we-do[data-active="apprenez"] article#apprenez {
   background-color: rgba(101, 186, 89, 0.8);
 }
 div#main #what-we-do[data-active="apprenez"] article#enseignez,
@@ -380,7 +385,7 @@ div#main #what-we-do article:after {
 div#main #what-we-do article h1 {
   font-family: brandon-grotesque;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 500;
   color: white;
   font-size: 400%;
   text-align: center;
@@ -406,11 +411,34 @@ div#main #what-we-do article:hover .details {
   transition-delay: 0s;
 }
 
-div#main #what-we-do article header i {
+div#main #what-we-do article:hover header i.angle {
+  opacity: 1;
+}
+
+div#main #what-we-do article header i.angle {
   color: white;
   font-size: 100px;
   transition-property: opacity;
   transition-duration: 0.2s;
+  display: block;
+  opacity: 0.5;
+}
+
+div#main #what-we-do article#enseignez header i.angle:after {
+  -webkit-transform: rotate(-135deg);
+  top: -10px;
+}
+
+div#main #what-we-do article header i.angle:after {
+  content: "";
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  position: relative;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
 }
 
 #equipe > ul {
@@ -437,6 +465,7 @@ div#main #what-we-do article header i {
   font-family: adelle;
   font-weight: 800;
   font-size: 120%;
+  font-style: italic;
   margin-bottom: 20px;
   line-height: 125%;
 }
@@ -445,6 +474,7 @@ div#main #what-we-do article header i {
   font-family: adelle;
   font-style: italic;
   line-height: 125%;
+  text-align: left;
   color: #666;
 }
 
