@@ -93,6 +93,11 @@ a#top-icon {
   font-size: 24px;
   line-height: 48px;
   color: transparent;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+body #top-icon:hover {
+  color: white;
 }
 body.anchored #top-icon {
   color: black;
@@ -424,7 +429,7 @@ div#main #what-we-do article header i.angle {
   opacity: 0.5;
 }
 
-div#main #what-we-do article#enseignez header i.angle:after {
+div#main #what-we-do article#apprenez header i.angle:after {
   -webkit-transform: rotate(-135deg);
   top: -10px;
 }
