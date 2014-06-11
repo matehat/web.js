@@ -118,7 +118,7 @@ body > nav {
   left: 0;
   right: 0;
   height: 68px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.95);
   z-index: 200;
 /*  opacity: 0;*/
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -307,20 +307,22 @@ div#main #who-we-are p {
 
 div#main #who-we-are p.bref {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 130%;
   margin-bottom: 0;
+  color: #333;
 }
 
 div#main #who-we-are p.bref strong {
-  color: #65BA59;
+  color: black;
+  font-weight: 800;
 }
 
 div#main #what-we-do {
   width: 100%;
   height: 600px;
   background-image: url(/img/teach.jpg);
-  background-position: 50% 0%;
+  background-position: 30% 0%;
   background-size: cover;
 }
 
@@ -489,11 +491,13 @@ div#main #what-we-do article header i.angle:after {
   color: #555;
   font-size: 120%;
   text-align: center;
+  font-weight: 300;
 }
 
 #equipe > p em {
   font-style: italic;
-  color: #3BBAE5;
+  color: black;
+  font-weight: 800;
 }
 
 #equipe > h1 {
