@@ -27,6 +27,7 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	/* position:  relative; */
 }
 body {
 	line-height: 1;
@@ -55,6 +56,7 @@ div.container {
 body {
   height: 100%;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 #top-pane {
@@ -215,6 +217,10 @@ a#top-icon img.black {
   text-align: center;
   font-style: italic;
 }
+#top-pane header p strong {
+  border-bottom: 1px solid white;
+  border-bottom-color: rgba(255,255,255,0.3);
+}
 
 header.hero img {
   height: 300px;
@@ -223,7 +229,7 @@ header.hero img {
   margin-bottom: 50px;
 }
 .call-to-action {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .call-to-action a {
   display: inline-block;
@@ -278,22 +284,19 @@ div#main #who-we-are {
   padding: 120px 0;
 }
 
-div#main #who-we-are i.icon {
+div#main #who-we-are svg {
   float: left;
   font-size: 160px;
-  margin: 10px 0 0 40px;
+  margin: -30px 0 0 0px;
   color: #65BA59;
 }
 div#main #who-we-are h1 {
   font-family: "brandon-grotesque";
   font-size: 230%;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 30px;
   margin-left: 260px
-}
-div#main #who-we-are h1 strong {
-  font-weight: 500;
 }
 
 div#main #who-we-are p {
@@ -318,12 +321,17 @@ div#main #who-we-are p.bref strong {
   font-weight: 800;
 }
 
+div#main #what-we-do h1 {
+  transition-property: color;
+  transition-duration: 0.2s;
+}
 div#main #what-we-do {
   width: 100%;
   height: 600px;
   background-image: url(/img/teach.jpg);
   background-position: 30% 0%;
   background-size: cover;
+  position: relative;
 }
 
 div#main #what-we-do article {
@@ -345,11 +353,9 @@ div#main #what-we-do article#enseignez:hover,
 div#main #what-we-do article#apprenez:hover {
   background-color: rgba(0,0,0,0.3);
 }
-div#main #what-we-do[data-active="enseignez"] article#enseignez {
-  background-color: rgba(59, 186, 229, 0.8);
-}
+div#main #what-we-do[data-active="enseignez"] article#enseignez,
 div#main #what-we-do[data-active="apprenez"] article#apprenez {
-  background-color: rgba(101, 186, 89, 0.8);
+  background-color: rgba(59, 186, 229, 0.9);
 }
 div#main #what-we-do[data-active="apprenez"] article#enseignez,
 div#main #what-we-do[data-active="enseignez"] article#apprenez {
@@ -358,15 +364,34 @@ div#main #what-we-do[data-active="enseignez"] article#apprenez {
 
 div#main #what-we-do[data-active="enseignez"] article#enseignez header,
 div#main #what-we-do[data-active="apprenez"] article#apprenez header {
-  top: -250px;
+  top: -200px;
+}
+div#main #what-we-do[data-active="enseignez"] article#enseignez h1,
+div#main #what-we-do[data-active="apprenez"] article#apprenez h1 {
+  color: transparent;
 }
 
 div#main #what-we-do[data-active="enseignez"] article#enseignez header i,
 div#main #what-we-do[data-active="apprenez"] article#apprenez header i,
-div#main #what-we-do[data-active="enseignez"] article#enseignez .details,
-div#main #what-we-do[data-active="apprenez"] article#apprenez .details {
+div#main #what-we-do[data-active="enseignez"] article#enseignez .show-details,
+div#main #what-we-do[data-active="apprenez"] article#apprenez .show-details {
   opacity: 0;
 }
+
+div#main #what-we-do[data-active="apprenez"] article#apprenez ul li,
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(1),
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(1) { transition-delay: 0.2s; }
+
+div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(2),
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(2) { transition-delay: 0.3s; }
+
+div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(3),
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(3) { transition-delay: 0.4s; }
 
 div#main #what-we-do article#enseignez {
   background-color: rgba(0,0,0,0.2);
@@ -382,6 +407,33 @@ div#main #what-we-do article header {
   transition-property: top;
   transition-duration: 0.2s;
 }
+div#main #what-we-do article ul {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: adelle;
+  font-size: 125%;
+  font-weight: 500;
+  color: white;
+  line-height: 150%;
+}
+div#main #what-we-do article ul li {
+  margin: 20px 0 0 0;
+  padding: 10px 80px 0;
+  transition-property: opacity;
+  transition-delay: 0s;
+  transition-duration: 0.15s;
+  opacity: 0;
+}
+div#main #what-we-do article ul li hr {
+  height: 0px;
+  border-top: 1px solid white;
+  border-color: rgba(255,255,255,0.4);
+  border-width: 1px 0 0 0;
+  margin: 30px 160px 0;
+}
 
 div#main #what-we-do article:after {
   content: "";
@@ -393,15 +445,39 @@ div#main #what-we-do article:after {
 div#main #what-we-do article h1 {
   font-family: brandon-grotesque;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
   color: white;
-  font-size: 400%;
+  color: rgba(255,255,255,0.7);
+  font-size: 300%;
   text-align: center;
   vertical-align: middle;
   display: block;
 }
+div#main #what-we-do article h1 strong {
+  display: block;
+  font-weight: 500;
+  font-size: 150%;
+  color: white;
+}
+div#main #what-we-do article p.subtitle {
+  font-family: adelle;
+  font-size: 120%;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 100%;
+  line-height: 140%;
+}
+div#main #what-we-do[data-active="apprenez"] article#apprenez p.subtitle,
+div#main #what-we-do[data-active="enseignez"] article#enseignez p.subtitle {
+  opacity: 0.7;
+}
 
-div#main #what-we-do article .details {
+div#main #what-we-do article .show-details {
   opacity: 0;
   position: relative;
   transition-delay: 0.2s;
@@ -413,63 +489,168 @@ div#main #what-we-do article .details {
   font-family: "adelle";
 }
 
-div#main #what-we-do article:hover .details {
+div#main #what-we-do article:hover .show-details {
   opacity: 0.6;
   top: 10px;
   transition-delay: 0s;
 }
 
-div#main #what-we-do article:hover header i.angle {
-  opacity: 1;
-}
-
-div#main #what-we-do article header i.angle {
-  color: white;
-  font-size: 100px;
-  transition-property: opacity;
+div#main #what-we-do a.sign-up {
+	color: #333;
+	font-family: brandon-grotesque;
+	font-size: 120%;
+	text-transform: uppercase;
+	font-weight: 800;
+	text-decoration: none;
+	background-color: white;
+	display: block;
+	position: absolute;
+	bottom: -20px;
+	border-radius: 22px;
+	border: 2px solid white;
+	left: 50%;
+	padding: 10px 30px;
+	width: 180px;
+	text-align: center;
+	line-height: 20px;
+	margin-left: -120px;
+  transition-property: border, background-color, color;
   transition-duration: 0.2s;
-  display: block;
-  opacity: 0.5;
+}
+div#main #what-we-do a.sign-up:hover {
+	background-color: #3BBAE5;
+	color: white;
 }
 
-div#main #what-we-do article#apprenez header i.angle:after {
-  -webkit-transform: rotate(-135deg);
-  top: -10px;
+#material {
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #65BA59;
+	border-color: white;
+	border-style: solid;
+	border-width: 0 15px 15px 15px;
+	display: block;
+	height: 100%;
+	padding: 80px 0 50px 0;
+    color: white;
+}
+#material .inner {
+	width: 1000px;
+	margin: 0 auto;
 }
 
-div#main #what-we-do article header i.angle:after {
-  content: "";
+#material h1 {
+  font-family: brandon-grotesque;
+  font-size: 230%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+#material .icons {
+	text-align: center;
+	margin: 0 0 30px;
+	font-size: 300%;
+	/* opacity: 0.5; */
+}
+#material .inner > p {
+  font-family: adelle;
+  opacity: 0.6;
+  font-size: 120%;
+  text-align: center;
+  font-weight: 300;
+}
+#material ul {
+  margin: 40px 0 0 0;
+  font-size: 0;
+}
+#material li {
   display: inline-block;
-  height: 42px;
-  width: 42px;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  position: relative;
-  top: 10px;
-  -webkit-transform: rotate(45deg);
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 20px 20px 40px;
+  font-family: adelle;
+  margin-bottom: 20px;
+}
+#material li:nth-child(1),
+#material li:nth-child(2) {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-#equipe > ul {
+#material li h2 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 150%;
+}
+#material li p {
+  font-style: italic;
+  line-height: 150%;
+}
+
+#equipe > .inner > ul {
   margin-top: 30px;
   font-size: 0px;
 }
 
-#equipe > ul li {
+#equipe > .inner > ul li {
   display: inline-block;
   width: 20%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
   font-size: 16px;
+  vertical-align: top;
+}
+#equipe > .inner > ul li img {
+  width: 80px;
+  height: 80px;
+  border-radius: 46px;
+  margin-bottom: 10px;
+  border: 6px solid rgba(0,0,0,0.1);
 }
 
-#equipe > ul li i {
-  font-size: 600%;
+#equipe > .inner > ul li i {
+  display: inline-block;
+  font-size: 400%;
   margin-bottom: 10px;
   color: #3BBAE5;
+  width: 84px;
+  height: 84px;
+  border-radius: 46px;
+  margin-bottom: 10px;
+  border: 6px solid rgba(59, 186, 229, 0.1);
+  line-height: 92px;
+  transition-duration: 0.15s;
+  transition-property: color,background-color;
+}
+#equipe > .inner > ul li.join-us {
+	cursor: pointer;
+}
+#equipe > .inner > ul li.join-us:hover i {
+	background-color: #3BBAE5;
+	color: white;
+}
+#equipe > .inner > ul li.join-us p {
+	text-align: center;
+  	padding-left: 0;
+}
+#equipe > .inner > ul li a[href="#join-us"] {
+	color: #3BBAE5;
+	font-family: brandon-grotesque;
+	font-weight: bold;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 20px;
+	margin-top: 20px;
+	text-align: left;
+}
+#equipe > .inner > ul li:hover a[href="#join-us"] {
+	text-decoration: underline;
 }
 
-#equipe > ul li h1 {
+#equipe > .inner > ul li h1 {
   font-family: adelle;
   font-weight: 800;
   font-size: 120%;
@@ -478,15 +659,16 @@ div#main #what-we-do article header i.angle:after {
   line-height: 125%;
 }
 
-#equipe > ul li p {
+#equipe > .inner > ul li p {
   font-family: adelle;
   font-style: italic;
   line-height: 125%;
   text-align: left;
   color: #666;
+  padding-left: 10px;
 }
 
-#equipe > p {
+#equipe .inner > p {
   font-family: adelle;
   color: #555;
   font-size: 120%;
@@ -494,25 +676,87 @@ div#main #what-we-do article header i.angle:after {
   font-weight: 300;
 }
 
-#equipe > p em {
+#equipe .inner > p em {
   font-style: italic;
   color: black;
   font-weight: 800;
 }
 
-#equipe > h1 {
+#equipe .inner > h1 {
   font-family: brandon-grotesque;
   font-size: 230%;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
 }
-
 #equipe {
+  overflow: hidden;
+  position: relative;
+}
+#equipe .inner {
   width: 1000px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 80px 0;
+  position: relative;
+  left: 0;
 }
+
+#equipe .inner,
+#equipe .join-form {
+	transition-property: left;
+	transition-duration: 0.4s;
+}
+
+#equipe.joining > .inner {
+	left: -100%;
+}
+#equipe.joining .join-form {
+	left: 0;
+}
+
+#equipe div.join-form {
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: transparent;
+}
+
+div.join-form ul {
+  text-align: center;
+  font-family: adelle;
+  font-size: 125%;
+  font-weight: 500;
+  line-height: 150%;
+  margin-top: 40px
+}
+div.join-form ul li {
+  margin: 20px 0 0 0;
+  padding: 10px 80px 0;
+}
+div.join-form ul li hr {
+  height: 0px;
+  border-top: 1px solid white;
+  border-color: rgba(0,0,0,0.1);
+  border-width: 1px 0 0 0;
+  margin: 30px 160px 0;
+}
+
+div.join-form a.close {
+	position: absolute;
+	left: 0;
+	font-size: 360%;
+	color: #333;
+	transition-property: color;
+	transition-duration: 0.2s;
+	display: inline-block;
+	padding: 0 20px;
+}
+div.join-form a.close:hover {
+	color: #999;
+}
+
 
 footer {
   background-color: #333;
@@ -522,3 +766,31 @@ footer {
   color: white;
   text-align: center;
 }
+
+
+#animated-logo { 
+  width: 240px; 
+  height: 240px;
+}
+#animated-logo polygon {
+  transition-property: fill;
+  transition-duration: 0.5s;
+}
+
+#animated-logo .top_right {     fill:#999; transition-delay: 0.4s; }
+#animated-logo .join_top {      fill:#222; transition-delay: 0.35s; }
+#animated-logo .middle_right {  fill:#999; transition-delay: 0.1s; }
+#animated-logo .top_left {      fill:#555; transition-delay: 0.3s; }
+#animated-logo .middle_left {   fill:#555; transition-delay: 0.35s; }
+#animated-logo .join_bottom {   fill:#bbb; transition-delay: 0.2s; }
+#animated-logo .bottom_right {  fill:#555; transition-delay: 0.33s; }
+#animated-logo .bottom_left {   fill:#999; transition-delay: 0.45s; }
+
+#who-we-are.colored .top_right {     fill:#1C8472; }
+#who-we-are.colored .join_top {      fill:#F3BC19; }
+#who-we-are.colored .middle_right {  fill:#E03C33; }
+#who-we-are.colored .top_left {      fill:#68BB45; }
+#who-we-are.colored .middle_left {   fill:#F08921; }
+#who-we-are.colored .join_bottom {   fill:#923D97; }
+#who-we-are.colored .bottom_right {  fill:#3495D2; }
+#who-we-are.colored .bottom_left {   fill:#40B9EB; }
