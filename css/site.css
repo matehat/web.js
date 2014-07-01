@@ -70,7 +70,6 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 98%;
-  min-height: 600px;
   position: absolute;
   left: 0;
   top: 0;
@@ -435,6 +434,8 @@ div#main #what-we-do article p.subtitle {
   transition-duration: 0.2s;
   width: 100%;
   line-height: 140%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 div#main #what-we-do[data-active="apprenez"] article#apprenez p.subtitle,
 div#main #what-we-do[data-active="enseignez"] article#enseignez p.subtitle {
@@ -755,6 +756,9 @@ footer {
 #who-we-are.colored .bottom_left {   fill:#40B9EB; }
 
 @media (min-width:769px) {
+  #top-pane {
+    min-height: 600px;
+  }
   div#main #what-we-do {  
     height: 600px;
     background-image: url(/img/teach.jpg);
@@ -896,6 +900,12 @@ footer {
 }
 
 @media(max-width: 596px) {
+  #top-pane {
+    height: 480px;
+  }
+  div#main {
+    top: 500px;
+  }
   div#main #who-we-are {
     text-align: center;
     padding: 80px 0;
@@ -910,6 +920,9 @@ footer {
   div#main #who-we-are h1,
   div#main #who-we-are p {
     margin-left: 0;
+  }
+  #material h1 {
+    font-size: 200%;
   }
   #material li {
     width: 100%;
