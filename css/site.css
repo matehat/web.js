@@ -60,14 +60,23 @@ body {
 }
 
 #top-pane {
-  transition-delay: 0s;
-  transition-duration: 0s;
-  transition-property: none;
-  transition-timing-function: ease;
-  background-image: -webkit-gradient(linear, 50% top, 50% bottom, from(transparent), to(rgba(0,0,0,0.5))), url(/img/class.jpg);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-property: none;
+          transition-property: none;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  background-image:  -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,0.5))), url(/img/class.jpg);
+  background-image:  -webkit-linear-gradient(top, transparent, rgba(0,0,0,0.5)), url(/img/class.jpg);
+  background-image:  linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)), url(/img/class.jpg);
   background-position: 50% 0%;
-  background-size: cover;
-  box-sizing: border-box;
+  -webkit-background-size: cover cover;
+          background-size: cover;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 98%;
   position: absolute;
@@ -94,8 +103,10 @@ a#top-icon {
   font-size: 24px;
   line-height: 48px;
   color: transparent;
-  transition-property: color;
-  transition-duration: 0.3s;
+  -webkit-transition-property: color;
+          transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 body #top-icon:hover {
   color: white;
@@ -104,8 +115,10 @@ body.anchored #top-icon {
   color: black;
 }
 a#top-icon img {
-  transition-property: opacity;
-  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   height: 48px;
   width: 48px;
   position: absolute;
@@ -140,8 +153,10 @@ body > nav ul li {
   line-height: 48px;
   margin: 10px; 
   border-bottom: 2px solid transparent;
-  transition-property: border-color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: border-color;
+          transition-property: border-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   margin-right: 10px;
 }
 body > nav ul li.separator {
@@ -177,7 +192,6 @@ a#top-icon img.black {
   display: inline-block;
   vertical-align: middle;
   margin: auto;
-/*  -webkit-transform: scale(1.4, 1.4);*/
 }
 #top-pane header h1,
 #top-pane header h2,
@@ -241,15 +255,19 @@ header.hero img {
   border: 1px solid rgba(255,255,255,0.2);;
   border-radius: 2px;
   font-size: 120%;
-  transition-property: border, background-color, color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: border, background-color, color;
+          transition-property: border, background-color, color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   background-color: rgba(255,255,255,0.2);
 }
 .call-to-action a strong {
   font-weight: bold;
   color: white;
-  transition-property: color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: color;
+          transition-property: color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .call-to-action a:first-child {
    margin-right: 10px; 
@@ -322,19 +340,23 @@ div#main #who-we-are p.bref strong {
 }
 
 div#main #what-we-do h1 {
-  transition-property: color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: color;
+          transition-property: color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 div#main #what-we-do {
   width: 100%;
   background-position: 30% 0%;
-  background-size: cover;
+  -webkit-background-size: cover cover;
+          background-size: cover;
   position: relative;
 }
 
 div#main #what-we-do article {
   position: relative;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   text-align: center;
   cursor: pointer;
 }
@@ -359,17 +381,18 @@ div#main #what-we-do[data-active="apprenez"] article#apprenez .show-details {
 div#main #what-we-do[data-active="apprenez"] article#apprenez ul li,
 div#main #what-we-do[data-active="enseignez"] article#enseignez ul li {
   opacity: 1;
-  transition-duration: 0.7s;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
 }
 
 div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(1),
-div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(1) { transition-delay: 0.2s; }
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(1) { -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
 
 div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(2),
-div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(2) { transition-delay: 0.3s; }
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(2) { -webkit-transition-delay: 0.3s; transition-delay: 0.3s; }
 
 div#main #what-we-do[data-active="apprenez"]  article#apprenez ul  li:nth-child(3),
-div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(3) { transition-delay: 0.4s; }
+div#main #what-we-do[data-active="enseignez"] article#enseignez ul li:nth-child(3) { -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
 
 div#main #what-we-do article#enseignez {
   background-color: rgba(0,0,0,0.2);
@@ -386,9 +409,12 @@ div#main #what-we-do article ul {
 div#main #what-we-do article ul li {
   margin: 20px 0 0 0;
   padding: 10px 80px 0;
-  transition-property: opacity;
-  transition-delay: 0s;
-  transition-duration: 0.15s;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
   opacity: 0;
 }
 div#main #what-we-do article ul li hr {
@@ -430,12 +456,16 @@ div#main #what-we-do article p.subtitle {
   font-weight: 300;
   color: white;
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   width: 100%;
   line-height: 140%;
   padding: 0 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 div#main #what-we-do[data-active="apprenez"] article#apprenez p.subtitle,
 div#main #what-we-do[data-active="enseignez"] article#enseignez p.subtitle {
@@ -445,9 +475,12 @@ div#main #what-we-do[data-active="enseignez"] article#enseignez p.subtitle {
 div#main #what-we-do article .show-details {
   opacity: 0;
   position: relative;
-  transition-delay: 0.2s;
-  transition-property: opacity,top;
-  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition-property: opacity,top;
+          transition-property: opacity,top;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   color: white;
   top: 0;
   text-decoration: none;
@@ -473,8 +506,10 @@ div#main #what-we-do a.sign-up {
   text-align: center;
   line-height: 20px;
   margin-left: -120px;
-  transition-property: border, background-color, color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: border, background-color, color;
+          transition-property: border, background-color, color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 div#main #what-we-do a.sign-up:hover {
   background-color: #3BBAE5;
@@ -483,7 +518,9 @@ div#main #what-we-do a.sign-up:hover {
 
 #material {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #65BA59;
   border-color: white;
   border-style: solid;
@@ -491,7 +528,7 @@ div#main #what-we-do a.sign-up:hover {
   display: block;
   height: 100%;
   padding: 80px 0 50px 0;
-    color: white;
+  color: white;
 }
 #material .inner {
   width: 1000px;
@@ -527,7 +564,9 @@ div#main #what-we-do a.sign-up:hover {
 #material li {
   display: inline-block;
   width: 50%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
   padding: 20px 20px 40px;
   font-family: adelle;
@@ -558,7 +597,9 @@ div#main #what-we-do a.sign-up:hover {
   width: 20%;
   text-align: center;
   padding: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
   vertical-align: top;
 }
@@ -581,8 +622,10 @@ div#main #what-we-do a.sign-up:hover {
   margin-bottom: 10px;
   border: 6px solid rgba(59, 186, 229, 0.1);
   line-height: 92px;
-  transition-duration: 0.15s;
-  transition-property: color,background-color;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-property: color,background-color;
+          transition-property: color,background-color;
 }
 #equipe > .inner > ul li.join-us {
   cursor: pointer;
@@ -663,8 +706,10 @@ div#main #what-we-do a.sign-up:hover {
 
 #equipe .inner,
 #equipe .join-form {
-  transition-property: left;
-  transition-duration: 0.4s;
+  -webkit-transition-property: left;
+          transition-property: left;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 #equipe.joining > .inner {
@@ -708,8 +753,10 @@ div.join-form a.close {
   left: 0;
   font-size: 360%;
   color: #333;
-  transition-property: color;
-  transition-duration: 0.2s;
+  -webkit-transition-property: color;
+          transition-property: color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   display: inline-block;
   padding: 0 20px;
 }
@@ -733,18 +780,20 @@ footer {
   height: 240px;
 }
 #animated-logo polygon {
-  transition-property: fill;
-  transition-duration: 0.5s;
+  -webkit-transition-property: fill;
+          transition-property: fill;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-#animated-logo .top_right {     fill:#999; transition-delay: 0.4s; }
-#animated-logo .join_top {      fill:#222; transition-delay: 0.35s; }
-#animated-logo .middle_right {  fill:#999; transition-delay: 0.1s; }
-#animated-logo .top_left {      fill:#555; transition-delay: 0.3s; }
-#animated-logo .middle_left {   fill:#555; transition-delay: 0.35s; }
-#animated-logo .join_bottom {   fill:#bbb; transition-delay: 0.2s; }
-#animated-logo .bottom_right {  fill:#555; transition-delay: 0.33s; }
-#animated-logo .bottom_left {   fill:#999; transition-delay: 0.45s; }
+#animated-logo .top_right {     fill:#999; -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
+#animated-logo .join_top {      fill:#222; -webkit-transition-delay: 0.35s; transition-delay: 0.35s; }
+#animated-logo .middle_right {  fill:#999; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+#animated-logo .top_left {      fill:#555; -webkit-transition-delay: 0.3s; transition-delay: 0.3s; }
+#animated-logo .middle_left {   fill:#555; -webkit-transition-delay: 0.35s; transition-delay: 0.35s; }
+#animated-logo .join_bottom {   fill:#bbb; -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
+#animated-logo .bottom_right {  fill:#555; -webkit-transition-delay: 0.33s; transition-delay: 0.33s; }
+#animated-logo .bottom_left {   fill:#999; -webkit-transition-delay: 0.45s; transition-delay: 0.45s; }
 
 #who-we-are.colored .top_right {     fill:#1C8472; }
 #who-we-are.colored .join_top {      fill:#F3BC19; }
@@ -767,7 +816,8 @@ footer {
     width: 50%;
     float: left;
     height: 600px;
-    transition-property: background,width;
+    -webkit-transition-property: background,width;
+            transition-property: background,width;
   }
   div#main #what-we-do[data-active="enseignez"] article#enseignez header,
   div#main #what-we-do[data-active="apprenez"] article#apprenez header {
@@ -780,8 +830,10 @@ footer {
     vertical-align: middle;
     position: relative;
     top: 0;
-    transition-property: top;
-    transition-duration: 0.2s;
+    -webkit-transition-property: top;
+            transition-property: top;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   div#main #what-we-do article ul {
     position: absolute;
@@ -799,7 +851,8 @@ footer {
   div#main #what-we-do article:hover .show-details {
     opacity: 0.6;
     top: 10px;
-    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
   }
 }
 
@@ -887,8 +940,10 @@ footer {
   div#main #what-we-do article {
     padding: 50px 0;
       max-height: 100px;
-    transition-property: max-height;
-    transition-duration: 0.2s;
+    -webkit-transition-property: max-height;
+            transition-property: max-height;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   div#main #what-we-do article p.subtitle {
     margin-bottom: 30px;
