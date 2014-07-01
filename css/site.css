@@ -962,4 +962,8 @@ footer {
   #top-pane header {
     width: 90%;
   }
+  body > nav, a#top-icon {
+    position: absolute;
+    top: -5000px;
+  }
 }

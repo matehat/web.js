@@ -16,24 +16,24 @@ $(function () {
   
   var transitionTime = 0;
   function scrolled() {
-      var $body = $('body');
-      if (Date.now() - transitionTime <= 200) return;
-      var distance = $(window).scrollTop() - ($('#main').position().top / 2);
-      if ($body.hasClass('anchored') && distance < -50) {
-        $body.removeClass('anchored');
-        $('nav').fadeOut(500);
-        transitionTime = Date.now();
-      } else if (!$body.hasClass('anchored') && distance >= 0) {
-        $body.addClass('anchored');
-        $('nav').fadeIn(500);
-        transitionTime = Date.now();
-      }
-      
-      distance = $(window).scrollTop() - ($('#main').position().top * 2 / 3);
-      if (!$('#who-we-are').hasClass('colored') && distance >= 0) {
-        $('#who-we-are').addClass('colored');
-      }
+    var $body = $('body');
+    if (Date.now() - transitionTime <= 200) return;
+    var distance = $(window).scrollTop() - ($('#main').position().top / 2);
+    if ($body.hasClass('anchored') && distance < -50) {
+      $body.removeClass('anchored');
+      $('nav').fadeOut(500);
+      transitionTime = Date.now();
+    } else if (!$body.hasClass('anchored') && distance >= 0) {
+      $body.addClass('anchored');
+      $('nav').fadeIn(500);
+      transitionTime = Date.now();
     }
+    
+    distance = $(window).scrollTop() - ($('#main').position().top * 2 / 3);
+    if (!$('#who-we-are').hasClass('colored') && distance >= 0) {
+      $('#who-we-are').addClass('colored');
+    }
+  }
   window.onscroll = scrolled;
   
   $('body')
