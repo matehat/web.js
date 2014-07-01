@@ -16,36 +16,36 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
-	/* position:  relative; */
+  display: block;
+  /* position:  relative; */
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 [hidden] { display: none; }
 
@@ -216,6 +216,7 @@ a#top-icon img.black {
   clear: left;
   text-align: center;
   font-style: italic;
+  line-height: 140%;
 }
 #top-pane header p strong {
   border-bottom: 1px solid white;
@@ -241,7 +242,6 @@ header.hero img {
   border: 1px solid rgba(255,255,255,0.2);;
   border-radius: 2px;
   font-size: 120%;
-/*  font-weight: bold;*/
   transition-property: border, background-color, color;
   transition-duration: 0.2s;
   background-color: rgba(255,255,255,0.2);
@@ -253,7 +253,7 @@ header.hero img {
   transition-duration: 0.2s;
 }
 .call-to-action a:first-child {
-  margin-right: 10px;
+   margin-right: 10px; 
 }
 .call-to-action a:hover {
   background-color: white;
@@ -290,6 +290,7 @@ div#main #who-we-are svg {
   margin: -30px 0 0 0px;
   color: #65BA59;
 }
+
 div#main #who-we-are h1 {
   font-family: "brandon-grotesque";
   font-size: 230%;
@@ -327,8 +328,6 @@ div#main #what-we-do h1 {
 }
 div#main #what-we-do {
   width: 100%;
-  height: 600px;
-  background-image: url(/img/teach.jpg);
   background-position: 30% 0%;
   background-size: cover;
   position: relative;
@@ -336,19 +335,11 @@ div#main #what-we-do {
 
 div#main #what-we-do article {
   position: relative;
-  width: 50%;
-  float: left;
-  height: 600px;
-  transition-property: background,width;
   transition-duration: 0.2s;
   text-align: center;
   cursor: pointer;
 }
 
-div#main #what-we-do[data-active="enseignez"] article#enseignez,
-div#main #what-we-do[data-active="apprenez"] article#apprenez {
-  width: 65%;
-}
 div#main #what-we-do article#enseignez:hover,
 div#main #what-we-do article#apprenez:hover {
   background-color: rgba(0,0,0,0.3);
@@ -357,19 +348,7 @@ div#main #what-we-do[data-active="enseignez"] article#enseignez,
 div#main #what-we-do[data-active="apprenez"] article#apprenez {
   background-color: rgba(59, 186, 229, 0.9);
 }
-div#main #what-we-do[data-active="apprenez"] article#enseignez,
-div#main #what-we-do[data-active="enseignez"] article#apprenez {
-  width: 35%;
-}
 
-div#main #what-we-do[data-active="enseignez"] article#enseignez header,
-div#main #what-we-do[data-active="apprenez"] article#apprenez header {
-  top: -200px;
-}
-div#main #what-we-do[data-active="enseignez"] article#enseignez h1,
-div#main #what-we-do[data-active="apprenez"] article#apprenez h1 {
-  color: transparent;
-}
 
 div#main #what-we-do[data-active="enseignez"] article#enseignez header i,
 div#main #what-we-do[data-active="apprenez"] article#apprenez header i,
@@ -397,21 +376,7 @@ div#main #what-we-do article#enseignez {
   background-color: rgba(0,0,0,0.2);
 }
 
-div#main #what-we-do article header {
-  text-align: center;
-  display: inline-block;
-  margin: auto;
-  vertical-align: middle;
-  position: relative;
-  top: 0;
-  transition-property: top;
-  transition-duration: 0.2s;
-}
 div#main #what-we-do article ul {
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
   text-align: center;
   font-family: adelle;
   font-size: 125%;
@@ -468,7 +433,6 @@ div#main #what-we-do article p.subtitle {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 0.2s;
-  position: absolute;
   width: 100%;
   line-height: 140%;
 }
@@ -489,54 +453,48 @@ div#main #what-we-do article .show-details {
   font-family: "adelle";
 }
 
-div#main #what-we-do article:hover .show-details {
-  opacity: 0.6;
-  top: 10px;
-  transition-delay: 0s;
-}
-
 div#main #what-we-do a.sign-up {
-	color: #333;
-	font-family: brandon-grotesque;
-	font-size: 120%;
-	text-transform: uppercase;
-	font-weight: 800;
-	text-decoration: none;
-	background-color: white;
-	display: block;
-	position: absolute;
-	bottom: -20px;
-	border-radius: 22px;
-	border: 2px solid white;
-	left: 50%;
-	padding: 10px 30px;
-	width: 180px;
-	text-align: center;
-	line-height: 20px;
-	margin-left: -120px;
+  color: #333;
+  font-family: brandon-grotesque;
+  font-size: 120%;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  background-color: white;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  border-radius: 22px;
+  border: 2px solid white;
+  left: 50%;
+  padding: 10px 30px;
+  width: 180px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: -120px;
   transition-property: border, background-color, color;
   transition-duration: 0.2s;
 }
 div#main #what-we-do a.sign-up:hover {
-	background-color: #3BBAE5;
-	color: white;
+  background-color: #3BBAE5;
+  color: white;
 }
 
 #material {
-	width: 100%;
-	box-sizing: border-box;
-	background-color: #65BA59;
-	border-color: white;
-	border-style: solid;
-	border-width: 0 15px 15px 15px;
-	display: block;
-	height: 100%;
-	padding: 80px 0 50px 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #65BA59;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  display: block;
+  height: 100%;
+  padding: 80px 0 50px 0;
     color: white;
 }
 #material .inner {
-	width: 1000px;
-	margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 #material h1 {
@@ -548,10 +506,10 @@ div#main #what-we-do a.sign-up:hover {
   color: white;
 }
 #material .icons {
-	text-align: center;
-	margin: 0 0 30px;
-	font-size: 300%;
-	/* opacity: 0.5; */
+  text-align: center;
+  margin: 0 0 30px;
+  font-size: 300%;
+  /* opacity: 0.5; */
 }
 #material .inner > p {
   font-family: adelle;
@@ -559,6 +517,7 @@ div#main #what-we-do a.sign-up:hover {
   font-size: 120%;
   text-align: center;
   font-weight: 300;
+  line-height: 140%;
 }
 #material ul {
   margin: 40px 0 0 0;
@@ -575,7 +534,7 @@ div#main #what-we-do a.sign-up:hover {
 }
 #material li:nth-child(1),
 #material li:nth-child(2) {
-	border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 #material li h2 {
@@ -625,29 +584,29 @@ div#main #what-we-do a.sign-up:hover {
   transition-property: color,background-color;
 }
 #equipe > .inner > ul li.join-us {
-	cursor: pointer;
+  cursor: pointer;
 }
 #equipe > .inner > ul li.join-us:hover i {
-	background-color: #3BBAE5;
-	color: white;
+  background-color: #3BBAE5;
+  color: white;
 }
 #equipe > .inner > ul li.join-us p {
-	text-align: center;
-  	padding-left: 0;
+  text-align: center;
+    padding-left: 0;
 }
 #equipe > .inner > ul li a[href="#join-us"] {
-	color: #3BBAE5;
-	font-family: brandon-grotesque;
-	font-weight: bold;
-	display: inline-block;
-	text-transform: uppercase;
-	text-decoration: none;
-	line-height: 20px;
-	margin-top: 20px;
-	text-align: left;
+  color: #3BBAE5;
+  font-family: brandon-grotesque;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 20px;
+  margin-top: 20px;
+  text-align: left;
 }
 #equipe > .inner > ul li:hover a[href="#join-us"] {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 #equipe > .inner > ul li h1 {
@@ -703,24 +662,24 @@ div#main #what-we-do a.sign-up:hover {
 
 #equipe .inner,
 #equipe .join-form {
-	transition-property: left;
-	transition-duration: 0.4s;
+  transition-property: left;
+  transition-duration: 0.4s;
 }
 
 #equipe.joining > .inner {
-	left: -100%;
+  left: -100%;
 }
 #equipe.joining .join-form {
-	left: 0;
+  left: 0;
 }
 
 #equipe div.join-form {
-	position: absolute;
-	left: 100%;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	background-color: transparent;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: transparent;
 }
 
 div.join-form ul {
@@ -733,7 +692,7 @@ div.join-form ul {
 }
 div.join-form ul li {
   margin: 20px 0 0 0;
-  padding: 10px 80px 0;
+  padding: 10px 20px 0;
 }
 div.join-form ul li hr {
   height: 0px;
@@ -744,17 +703,17 @@ div.join-form ul li hr {
 }
 
 div.join-form a.close {
-	position: absolute;
-	left: 0;
-	font-size: 360%;
-	color: #333;
-	transition-property: color;
-	transition-duration: 0.2s;
-	display: inline-block;
-	padding: 0 20px;
+  position: absolute;
+  left: 0;
+  font-size: 360%;
+  color: #333;
+  transition-property: color;
+  transition-duration: 0.2s;
+  display: inline-block;
+  padding: 0 20px;
 }
 div.join-form a.close:hover {
-	color: #999;
+  color: #999;
 }
 
 
@@ -794,3 +753,200 @@ footer {
 #who-we-are.colored .join_bottom {   fill:#923D97; }
 #who-we-are.colored .bottom_right {  fill:#3495D2; }
 #who-we-are.colored .bottom_left {   fill:#40B9EB; }
+
+@media (min-width:769px) {
+  div#main #what-we-do {  
+    height: 600px;
+    background-image: url(/img/teach.jpg);
+  }
+  div#main #what-we-do article {
+    width: 50%;
+    float: left;
+    height: 600px;
+    transition-property: background,width;
+  }
+  div#main #what-we-do[data-active="enseignez"] article#enseignez header,
+  div#main #what-we-do[data-active="apprenez"] article#apprenez header {
+    top: -200px;
+  }
+  div#main #what-we-do article header {
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    transition-property: top;
+    transition-duration: 0.2s;
+  }
+  div#main #what-we-do article ul {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+  }
+  div#main #what-we-do[data-active="enseignez"] article#enseignez h1,
+  div#main #what-we-do[data-active="apprenez"] article#apprenez h1 {
+    color: transparent;
+  }
+  div#main #what-we-do p.subtitle {  
+    position: absolute;
+  }
+  div#main #what-we-do article:hover .show-details {
+    opacity: 0.6;
+    top: 10px;
+    transition-delay: 0s;
+  }
+}
+
+@media (min-width:1080px) {
+  div#main #what-we-do[data-active="enseignez"] article#enseignez,
+  div#main #what-we-do[data-active="apprenez"] article#apprenez {
+    width: 65%;
+  }
+  div#main #what-we-do[data-active="apprenez"] article#enseignez,
+  div#main #what-we-do[data-active="enseignez"] article#apprenez {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1350px) {
+  div#main #what-we-do article { font-size: 90%; }
+}
+
+@media (max-width: 1180px) {
+  div#main #what-we-do article { font-size: 83%; }
+}
+
+@media (max-width: 1080px) {
+  div#main #who-we-are,
+  #material .inner,
+  #equipe .inner,
+  div.container { width: 90%; }
+}
+
+@media (max-width: 1080px) and (min-width: 768px) {
+  div#main #what-we-do article ul li {
+    margin: 10px 0 0 0;
+    padding: 10px 40px 0;
+  }
+  div#main #what-we-do article ul li hr {
+    margin: 30px 100px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #top-pane {
+    height: 640px;
+  }
+  div#main {
+    top: 660px;
+  }
+  
+  #top-pane header {
+    width: 440px;
+  }
+  #top-pane header img {
+    height: 180px;
+    width: 135px;
+    margin-bottom: 60px;
+  }
+  #top-pane header h1 {
+    margin-left: 135px;
+    font-size: 450%;
+    padding-top: 30px;
+  }
+  #top-pane header h2 {
+    margin-left: 137px;
+    font-size: 160%;
+  }
+  div.call-to-action a,
+  div.call-to-action a:first-child {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  #top-pane header > p {
+    margin-bottom: 60px;
+  }
+  #equipe > .inner > ul li {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  div#main #what-we-do article ul li hr,
+  div.join-form ul li hr {
+    margin: 30px 20% 0;
+  }
+  div#main #what-we-do {
+    background-image: none;
+    background-color: #999;
+  }
+  div#main #what-we-do article {
+    padding: 50px 0;
+      max-height: 100px;
+    transition-property: max-height;
+    transition-duration: 0.2s;
+  }
+  div#main #what-we-do article p.subtitle {
+    margin-bottom: 30px;
+  }
+  div#main #what-we-do[data-active="enseignez"] article#enseignez,
+  div#main #what-we-do[data-active="apprenez"] article#apprenez {
+    max-height: 1000px;
+  }
+}
+
+@media(max-width: 596px) {
+  div#main #who-we-are {
+    text-align: center;
+    padding: 80px 0;
+  }
+  div#main #who-we-are svg {
+    float: none;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  div#main #who-we-are h1,
+  div#main #who-we-are p {
+    margin-left: 0;
+  }
+  #material li {
+    width: 100%;
+  }
+  #material li:nth-child(3) {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  #material li:nth-child(4) {
+    padding-bottom: 0;
+  }
+  div.join-form ul li,
+  div#main #what-we-do article ul li {
+    padding: 10px 20px 0;
+  }
+  
+  #top-pane header img {
+    display: none;
+  }
+  #top-pane header {
+    font-size: 90%;
+  }
+  div#main #what-we-do article h1 {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+  }
+  #top-pane header h1,
+  #top-pane header h2,
+  #top-pane header p {
+    margin-left: 0;
+    text-align: center;
+  }
+  #top-pane header h2 {
+    margin-bottom: 50px;
+    opacity: 0.5;
+  }
+  #top-pane header {
+    width: 90%;
+  }
+}

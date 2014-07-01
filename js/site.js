@@ -8,8 +8,8 @@ $(function () {
   $(window).resize(function (e) {
     var height = window.innerHeight;
     console.log('?');
-    if (height < 600) {
-      $main.css('top', '600px');
+    if (height < 660) {
+      $main.css('top', '660px');
     } else {
       $main.css('top', '');
     }
