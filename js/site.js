@@ -4,16 +4,15 @@ $(function () {
     $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
   });
   
-  var $main = $('#main');
-  $(window).resize(function (e) {
-    var height = window.innerHeight;
-    console.log('?');
-    if (height < 660) {
-      $main.css('top', '660px');
-    } else {
-      $main.css('top', '');
-    }
-  });
+  // var $main = $('#main');
+  // $(window).resize(function (e) {
+  //   var height = window.innerHeight;
+  //   if (height < 660) {
+  //     $main.css('top', '660px');
+  //   } else {
+  //     $main.css('top', '');
+  //   }
+  // });
   
   var transitionTime = 0;
   function scrolled() {
