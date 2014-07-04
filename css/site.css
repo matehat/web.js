@@ -506,14 +506,17 @@ div#main #what-we-do a.sign-up {
   text-align: center;
   line-height: 20px;
   margin-left: -120px;
-  -webkit-transition-property: border, background-color, color;
-          transition-property: border, background-color, color;
+  -webkit-transition-property: border, background-color, color, opacity;
+          transition-property: border, background-color, color, opacity;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-}
-div#main #what-we-do a.sign-up:hover {
+  
   background-color: #3BBAE5;
   color: white;
+  z-index: 100;
+}
+div#main #what-we-do a.sign-up:hover {
+  background-color: #6dc7e5;;
 }
 
 #material {
@@ -1020,5 +1023,11 @@ footer {
   body > nav, a#top-icon {
     position: absolute;
     top: -5000px;
+  }
+  #equipe .inner > h1 {
+    padding: 0 20px;
+  }
+  div.join-form a.close {
+    left: -20px;
   }
 }
