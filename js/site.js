@@ -1,8 +1,4 @@
 $(function () {
-  $('div#main #what-we-do article').click(function (e) {
-    e.preventDefault();
-    $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
-  });
   
   // var $main = $('#main');
   // $(window).resize(function (e) {
@@ -48,11 +44,24 @@ $(function () {
       $('#equipe').removeClass('joining');
     })
     .on('click', 'a[href^="#"]', function (ev) {
+      if ($(this).attr('href') == '#') 
+        return;
       $.scrollTo($(this).attr('href'), 500, {
         offset: {top: -67},
         easing: 'easeOutQuint'
       });
       ev.preventDefault();
+    })
+    .on('click', '#what-we-do article a.close', function(ev) {
+      console.log('!', this);
+      ev.preventDefault();
+      ev.stopImmediatePropagation();
+      $('#what-we-do').attr('data-active', 'none');
+    })
+    .on('click', '#what-we-do article', function (e) {
+      e.preventDefault();
+      console.log('!', this);
+      $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
     });
   
   scrolled();
