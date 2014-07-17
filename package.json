@@ -12,7 +12,9 @@
     "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
-    "ejs": "~0.8.5"
+    "ejs": "~0.8.5",
+    "pg": "2.x",
+    "validator": "3.x"
   },
   "engines": {
     "node": "0.10.x"
