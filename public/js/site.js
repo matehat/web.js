@@ -1,5 +1,4 @@
 $(function () {
-  
   // var $main = $('#main');
   // $(window).resize(function (e) {
   //   var height = window.innerHeight;
@@ -36,12 +35,12 @@ $(function () {
     .on('click', 'a[href="#join-us"], li.join-us', function (ev) {
       ev.preventDefault();
       ev.stopImmediatePropagation();
-      $('#equipe').addClass('joining');
+      $('#team').addClass('joining');
     })
     .on('click', '.join-form a.close', function (ev) {
       ev.preventDefault();
       ev.stopImmediatePropagation();
-      $('#equipe').removeClass('joining');
+      $('#team').removeClass('joining');
     })
     .on('click', 'a[href^="#"]', function (ev) {
       if ($(this).attr('href') == '#') 

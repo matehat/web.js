@@ -1,0 +1,50 @@
+@import "sections/reset";
+
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+@mixin fluid-width {
+  @media (max-width: 1080px) { width: 90% }
+}
+
+div.container {
+  width: 1000px;
+  @include fluid-width;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@import "sections/nav", "sections/top";
+
+#main {
+  position: absolute;
+  top: 98%;
+  width: 100%;
+
+  @media (max-width: 768px) { top: 660px; }
+  @media (max-width: 596px) { top: 500px; }
+}
+
+@import "sections/who-we-are", "sections/material", "sections/what-we-do", "sections/team";
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  font-family: adelle;
+  font-size: 90%;
+  color: white;
+  text-align: center;
+}

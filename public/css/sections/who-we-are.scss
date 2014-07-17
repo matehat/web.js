@@ -1,0 +1,91 @@
+#main {
+  #who-we-are {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 120px 0;
+
+    @include fluid-width;
+
+    svg {
+      float: left;
+      font-size: 160px;
+      margin: -30px 0 0 0px;
+      color: #65BA59;
+    }
+
+    #animated-logo { 
+      width: 240px; 
+      height: 240px;
+
+      polygon {
+        transition-property: fill;
+        transition-duration: 0.5s;
+      }
+
+      .top_right {     fill:#999; transition-delay: 0.4s; }
+      .join_top {      fill:#222; transition-delay: 0.35s; }
+      .middle_right {  fill:#999; transition-delay: 0.1s; }
+      .top_left {      fill:#555; transition-delay: 0.3s; }
+      .middle_left {   fill:#555; transition-delay: 0.35s; }
+      .join_bottom {   fill:#bbb; transition-delay: 0.2s; }
+      .bottom_right {  fill:#555; transition-delay: 0.33s; }
+      .bottom_left {   fill:#999; transition-delay: 0.45s; }
+    }
+
+    &.colored #animated-logo {
+      .top_right {     fill:#1C8472; }
+      .join_top {      fill:#F3BC19; }
+      .middle_right {  fill:#E03C33; }
+      .top_left {      fill:#68BB45; }
+      .middle_left {   fill:#F08921; }
+      .join_bottom {   fill:#923D97; }
+      .bottom_right {  fill:#3495D2; }
+      .bottom_left {   fill:#40B9EB; }
+    }
+
+    h1 {
+      font-family: "brandon-grotesque";
+      font-size: 230%;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      margin-left: 260px
+    }
+    p {
+      margin-left: 260px;
+      font-family: "adelle";
+      line-height: 150%;
+      font-size: 120%;
+      font-weight: 200;
+      margin-bottom: 20px;
+
+      &.bref {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 130%;
+        margin-bottom: 0;
+        color: #333;
+
+        strong {
+          color: black;
+          font-weight: 800;
+        }
+      }
+    }
+
+    @media (max-width: 596px) {
+      text-align: center;
+      padding: 80px 0;
+
+      svg#animated-logo {
+        float: none;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      h1, p { margin-left: 0 }
+    }
+  }
+}

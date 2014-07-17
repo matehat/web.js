@@ -1,0 +1,84 @@
+#main {
+  #material {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #65BA59;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    display: block;
+    height: 100%;
+    padding: 80px 0 50px 0;
+    color: white;
+
+    .inner {
+      width: 1000px;
+      margin: 0 auto;
+
+      @include fluid-width;
+
+      > p {
+        font-family: adelle;
+        opacity: 0.6;
+        font-size: 120%;
+        text-align: center;
+        font-weight: 300;
+        line-height: 140%;
+      }
+    }
+
+    h1 {
+      font-family: brandon-grotesque;
+      font-size: 230%;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .icons {
+      text-align: center;
+      margin: 0 0 30px;
+      font-size: 300%;
+    }
+
+    ul {
+      margin: 40px 0 0 0;
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 20px 20px 40px;
+        font-family: adelle;
+        margin-bottom: 20px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        h2 {
+          text-align: center;
+          margin: 0 0 20px;
+          font-size: 150%;
+        }
+        p {
+          font-style: italic;
+          line-height: 150%;
+        }
+      }
+    }
+
+    @media (max-width: 596px) {
+      h1 { font-size: 200% }
+      ul li { 
+        width: 100%;
+        &:nth-child(3) { border-bottom: 1px solid rgba(255,255,255,0.2) }
+        &:nth-child(4) { padding-bottom: 0 }
+      }
+    }
+  }
+}
