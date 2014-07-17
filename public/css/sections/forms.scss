@@ -1,0 +1,148 @@
+#main {
+  #signup-form {
+    background-color: #333;
+    transition-duration: 0.3s;
+    transition-property: height;
+    height: 0;
+    overflow: hidden;
+    z-index: 90;
+    position: relative;
+    border-top: 15px solid white;
+
+    &.visible { height: 165px; }
+
+    form {
+      clear: left;
+      margin: 30px 0;
+      text-align: center;
+
+      input {
+        padding: 8px 20px;
+        font-size: 16px;
+        line-height: 30px;
+        height: 20px;
+        border: 2px solid white;
+        border-radius: 23px;
+        text-transform: uppercase;
+        font-family: brandon-grotesque;
+        text-align: center;
+        z-index: 5;
+
+        &:focus { outline-width: 0; }
+        &[name="name"] {
+          border-radius: 23px 23px 0 0;
+          border-bottom: 1px solid #ddd;
+        }
+        &[name="email"] {
+          border-radius: 0 0 23px 23px;
+          border-top: 0;
+        }
+      }
+
+      a.submit {
+        color: white;
+        font-family: brandon-grotesque;
+        font-weight: bold;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 20px;
+        margin-top: 20px;
+        text-align: left;
+        display: block;
+        text-align: center;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+
+    p.success {
+      color: white;
+      font-family: brandon-grotesque;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 20px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 160%;
+      margin-top: 40px;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  #team .join-form form {
+    text-align: center;
+    position: relative;
+
+    input[name="email"] {
+      padding: 8px 20px;
+      font-size: 16px;
+      line-height: 30px;
+      height: 20px;
+      border: 2px solid #3BBAE5;
+      border-radius: 23px;
+      text-transform: uppercase;
+      font-family: brandon-grotesque;
+      margin-top: 30px;
+      text-align: center;
+      z-index: 5;
+
+      &:focus { outline-width: 0; }
+    }
+
+    a.submit {
+      color: #3BBAE5;
+      font-family: brandon-grotesque;
+      font-weight: bold;
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 20px;
+      margin-top: 20px;
+      text-align: left;
+      display: block;
+      text-align: center;
+
+      &:hover { text-decoration: underline; }
+    }
+
+    p.success {
+      color: #3BBAE5;
+      font-family: brandon-grotesque;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 20px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 160%;
+      margin-top: 40px;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  #team .join-form form,
+  #signup-form form {
+    &.success {
+      p.success, a.submit, input {
+        transition-property: opacity;
+        transition-duration: 0.5s;
+      }
+      p.success { 
+        display: block;
+        opacity: 1 
+      }
+      a.submit, input { opacity: 0 }
+    }
+    &.invalid.email {
+      input[name="email"] { border-color: red; }
+    }
+  }
+}

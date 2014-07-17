@@ -29,6 +29,7 @@ $(function () {
       $('#who-we-are').addClass('colored');
     }
   }
+
   window.onscroll = scrolled;
   
   $('body')
@@ -61,6 +62,26 @@ $(function () {
       e.preventDefault();
       console.log('!', this);
       $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
+    })
+    .on('click', 'form a.submit', function(e) {
+      e.preventDefault();
+      var form = $(this).closest('form');
+      var btn = $(this);
+
+      if (btn.data('loading')) 
+        return;
+
+      btn.data('loading', true);
+      $.post(form.attr('action'), form.serialize()).always(function(data) {
+        if (data.msg == 'success') form[0].reset();
+        form.attr('class', data.msg);
+        btn.data('loading', false);
+      });
+    })
+    .on('click', 'a.sign-up', function(e) {
+      e.preventDefault();
+      $(this).fadeOut(200);
+      $('#signup-form').addClass('visible');
     });
   
   scrolled();
