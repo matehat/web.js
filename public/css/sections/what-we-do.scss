@@ -182,6 +182,10 @@
           right: 20px;
           top: 20px;
         }
+
+        ul li hr {
+          margin: 30px 20% 0;
+        }
       }
       @media (max-width: 596px) {
         ul li { padding: 10px 20px 0 }

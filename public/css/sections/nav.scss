@@ -24,8 +24,9 @@ body {
     }
   }
 
-  &.anchored  a#top-icon       { color: black }
-              a#top-icon:hover { color: white; }
+  &.anchored  a#top-icon,
+  &.anchored  a#top-icon:hover { color: black }
+              a#top-icon:hover { color: white }
 
               a#top-icon       img.white,
   &.anchored  a#top-icon       img.black,
