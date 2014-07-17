@@ -9,6 +9,10 @@
       height: 600px;
       background-image: url(/img/teach.jpg);
     }
+    @media (max-width: 768px) {
+      background-image: none;
+      background-color: #999;
+    }
 
     h1 {
       transition-property: color;
