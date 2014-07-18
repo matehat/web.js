@@ -90,8 +90,16 @@
       margin-top: 30px;
       text-align: center;
       z-index: 5;
+      background-color: #3BBAE5;
+      color: white;
 
       &:focus { outline-width: 0; }
+      &::-webkit-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        color: white;
+      }
     }
 
     a.submit {
