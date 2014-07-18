@@ -25,6 +25,45 @@ body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
+
+  a.close {
+    position: absolute;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-delay: 0;
+
+    @media (min-width: 769px) {
+      right: 30px;
+      top: 30px;
+
+      span {
+        opacity: 0.6;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+      }
+
+      &:hover span { opacity: 1; }
+    }
+    @media (min-width:1080px) {
+      right: 40px;
+      top: 40px;
+      font-size: 45px;
+    }
+    @media (max-width: 768px) {
+      right: 20px;
+      top: 20px;
+    }
+    @media (max-width: 596px) {
+      right: 15px;
+      top: 15px;
+    }
+  }
 }
 
 @import "sections/nav", "sections/top";

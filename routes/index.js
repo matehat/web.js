@@ -30,6 +30,7 @@ router.post('/formateur', function(req, res) {
     end(res, 406, 'invalid email');
   }
 });
+
 router.post('/signup', function(req, res) {
   var email = req.body.email;
   if (validator.isEmail(email)) {

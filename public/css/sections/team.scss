@@ -160,7 +160,7 @@
         }
       }
 
-      a.close {
+      a.back {
         position: absolute;
         left: 0;
         font-size: 360%;
@@ -193,7 +193,7 @@
         }
       }
       .join-form {
-        a.close { left: -20px }
+        a.back { left: -20px }
         ul li { padding: 10px 20px 0 }
       }
     }

@@ -38,7 +38,7 @@ $(function () {
       ev.stopImmediatePropagation();
       $('#team').addClass('joining');
     })
-    .on('click', '.join-form a.close', function (ev) {
+    .on('click', '.join-form a.back', function (ev) {
       ev.preventDefault();
       ev.stopImmediatePropagation();
       $('#team').removeClass('joining');
@@ -57,6 +57,11 @@ $(function () {
       ev.preventDefault();
       ev.stopImmediatePropagation();
       $('#what-we-do').attr('data-active', 'none');
+    })
+    .on('click', '#signup-form a.close', function(ev) {
+      ev.preventDefault();
+      $('#signup-form').removeClass('visible');
+      setTimeout(function() { $('a.sign-up').fadeIn(50); }, 200);
     })
     .on('click', '#what-we-do article', function (e) {
       e.preventDefault();
@@ -80,7 +85,7 @@ $(function () {
     })
     .on('click', 'a.sign-up', function(e) {
       e.preventDefault();
-      $(this).fadeOut(200);
+      $(this).fadeOut(50);
       $('#signup-form').addClass('visible');
     });
   
