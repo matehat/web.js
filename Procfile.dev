@@ -1,0 +1,3 @@
+sass: nodemon -x "sass -t compressed public/css/site.scss .sass-cache/site.css" -w css/site.scss -w css/sections/
+prefixer: nodemon -x "autoprefixer .sass-cache/site.css -o public/css/site.css" -w css/site.pre.css
+web: node ./bin/www
