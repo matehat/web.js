@@ -9,6 +9,7 @@ function end(res, code, msg) {
 }
 
 router.get('/', function(req, res) { res.render('index'); });
+router.get('/faq', function(req, res) { res.render('faq'); });
 
 router.post('/formateur', function(req, res) {
   var email = req.body.email;

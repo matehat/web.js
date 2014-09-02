@@ -1,0 +1,52 @@
+#main {
+  #pricing {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: rgba(215, 179, 89, 0.84);
+      border-color: white;
+      border-style: solid;
+      border-width: 0px 15px 0px 15px;
+      height: 100%;
+      padding: 30px 0 30px 0;
+      color: black;
+      
+      .inner {
+        display: inline-block;
+        width: 300px;
+        height: 500px;
+
+        > p {
+          font-family: adelle;
+          opacity: 0.6;
+          font-size: 120%;
+          text-align: center;
+          font-weight: 300;
+          line-height: 140%;
+        }
+      }
+      
+      .pricing-header {
+          background-color: black;
+          border-color: black;
+          border-style: solid;
+          border-width: 10px 10px 10px 10px;
+          padding: 20px 20px 20px 20px;
+          text-align:center;
+          color:white;
+      }
+      
+      ul {
+        margin: 40px 0 0 0;
+        font-size: 20;
+
+        li {
+          
+          font-family: adelle;
+          margin-bottom: 20px;
+          
+      }
+    }
+      
+      
+  }
+}
