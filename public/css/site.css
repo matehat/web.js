@@ -1197,11 +1197,43 @@ body > nav {
   height: 100%;
   padding: 30px 0 30px 0;
   color: black; }
-  #main #pricing .inner {
+  #main #pricing .pricing-outer {
     display: inline-block;
-    width: 300px;
-    height: 500px; }
-    #main #pricing .inner > p {
+    width: 49.5%;
+    height: 100%;
+    min-width: 410px; }
+  #main #pricing .pricing-inner {
+    width: 400px;
+    height: 100%;
+    margin: 0 auto; }
+    #main #pricing .pricing-inner .pricing-title {
+      font-family: arial;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      opacity: 0.9;
+      text-transform: uppercase; }
+    #main #pricing .pricing-inner .price-1 {
+      display: block;
+      font-size: 40px;
+      text-align: center;
+      opacity: 0.9;
+      font-weight: 300; }
+    #main #pricing .pricing-inner .price-2 {
+      font-size: 16px;
+      font-family: arial;
+      text-align: center;
+      font-style: normal;
+      font-weight: 400; }
+    #main #pricing .pricing-inner .price-detail {
+      font-family: adelle;
+      opacity: 0.7;
+      font-size: 150%;
+      text-align: center;
+      font-weight: 400;
+      line-height: 140%; }
+    #main #pricing .pricing-inner > p {
       font-family: adelle;
       opacity: 0.6;
       font-size: 120%;
@@ -1222,6 +1254,80 @@ body > nav {
     #main #pricing ul li {
       font-family: adelle;
       margin-bottom: 20px; }
+  @media (max-width: 853px) {
+    #main #pricing div.pricing-outer {
+      display: block;
+      width: 100%;
+      min-width: 1px; }
+    #main #pricing div.pricing-inner {
+      width: 90%;
+      max-width: 400px;
+      min-width: 1px; } }
+
+#main {
+  top: 275px; }
+  #main #faq {
+    width: 100%;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 0px 15px 0px 15px;
+    height: 100%;
+    padding: 3.5% 0;
+    color: black;
+    position: relative;
+    display: block; }
+    #main #faq .wrapper {
+      max-width: 1100px;
+      width: 100%;
+      margin: auto;
+      font-family: Helvetica, Arial;
+      font-size: 16px;
+      line-height: 1.5; }
+    #main #faq div.faq-row {
+      padding: 3.5% 0;
+      padding-left: 5%; }
+    #main #faq div.faq-colomn {
+      display: inline-block;
+      padding: 0 3.5% 0 0;
+      font-size: 16px;
+      width: 45%;
+      vertical-align: top; }
+    #main #faq h2.question {
+      display: block;
+      width: 95%;
+      font-size: 22px;
+      font-family: Helvetica;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      text-transform: uppercase; }
+    #main #faq p.response {
+      margin: 1em 0 0;
+      width: 95%;
+      padding: 0;
+      display: block;
+      font-size: 16px;
+      font-family: arial;
+      line-height: 1.25; }
+    @media (max-width: 768px) {
+      #main #faq p.response {
+        margin: 0.5em 0 0; }
+      #main #faq div.faq-row {
+        padding: 0 0;
+        padding-left: 5%; }
+      #main #faq div.faq-colomn {
+        padding: 0 10px 40px 0;
+        display: block;
+        width: 100%; } }
+  @media (max-width: 768px) {
+    #main {
+      top: 225px; } }
+  @media (max-width: 596px) {
+    #main {
+      top: 175px; } }
 
 footer {
   background-color: #333;
