@@ -23,14 +23,14 @@
       }
 
       .pricing-outer {
-        display: inline-block;
-        height: 100%;
         min-width: 410px;
         width: 50%;
         font-size: 16px;
       }
 
       #prix-groupe {
+        float: left;
+
         .price-1 {
           color: #68BB45;
         }
@@ -41,6 +41,8 @@
       }
 
       #prix-entreprise {
+        float: right;
+
         .price-1 {
           color: #F3BC19;
         }
@@ -131,6 +133,11 @@
     @media (max-width: 853px) {
       &:after {
         opacity: 0;
+      }
+
+      #prix-entreprise,
+      #prix-groupe {
+        float: none;
       }
 
         div.pricing-outer {
