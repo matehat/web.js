@@ -1199,7 +1199,7 @@ body > nav {
   color: black;
   font-size: 0;
   position: relative; }
-  #main #pricing:after {
+  #main #pricing::after {
     content: "";
     position: absolute;
     top: 100px;
@@ -1274,6 +1274,8 @@ body > nav {
       font-size: 120%;
       line-height: 130%; }
   @media (max-width: 853px) {
+    #main #pricing:after {
+      opacity: 0; }
     #main #pricing div.pricing-outer {
       display: block;
       width: 100%;
