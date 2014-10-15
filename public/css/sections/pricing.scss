@@ -2,58 +2,79 @@
   #pricing {
       width: 100%;
       box-sizing: border-box;
-      background-color: rgba(215, 179, 89, 0.84);
+      background-color: #333;
       border-color: white;
       border-style: solid;
-      border-width: 0px 15px 0px 15px;
+      border-width: 1px 0 0 0;
       height: 100%;
       padding: 30px 0 30px 0;
       color: black;
-      
+      font-size: 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        left: 50%;
+        width: 1px;
+        background-color: #555;
+      }
+
       .pricing-outer {
         display: inline-block;
-        width: 49.5%;
         height: 100%;
         min-width: 410px;
+        width: 50%;
+        font-size: 16px;
       }
-      
+
       .pricing-inner {
-        width: 400px;
         height: 100%;
         margin: 0 auto;
-        
+        padding: 5% 10%;;
+
         .pricing-title {
-          font-family: arial;
-          font-size: 25px;
-          font-weight: 600;  
+          font-family: brandon-grotesque;
+          font-size: 300%;
+          font-weight: 300;
           letter-spacing: 1px;
           line-height: 1.25;
           opacity: 0.9;
           text-transform: uppercase;
         }
-        
+
         .price-1 {
           display: block;
-          font-size: 40px;
+          font-size: 210%;
           text-align: center;
           opacity: 0.9;
-          font-weight: 300;
+          font-family: brandon-grotesque;
+          font-weight: 500;
         }
         .price-2 {
-          font-size: 16px;
-          font-family: arial;
+          font-size: 80%;
+          opacity: 0.6;
           text-align: center;
           font-style: normal;
           font-weight: 400;
         }
-        
+
         .price-detail {
           font-family: adelle;
-          opacity: 0.7;
-          font-size: 150%;
+          font-size: 120%;
           text-align: center;
           font-weight: 400;
           line-height: 140%;
+          font-style: italic;
+          margin-top: 1em;
+          color: #222;
+          background-color: #eee;
+          margin: 1em 50px 0;
+          padding: 5px 0;
+          border-radius: 18px;
+          font-weight: bold;
         }
 
         > p {
@@ -65,42 +86,38 @@
           line-height: 140%;
         }
       }
-      
+
       .pricing-header {
-          background-color: black;
-          border-color: black;
-          border-style: solid;
-          border-width: 10px 10px 10px 10px;
           padding: 20px 20px 20px 20px;
           text-align:center;
           color:white;
       }
-      
+
       ul {
         margin: 40px 0 0 0;
         font-size: 20;
 
         li {
-          
           font-family: adelle;
           margin-bottom: 20px;
-          
+          text-align: center;
+          color: #ddd;
+          font-size: 120%;
+          line-height: 130%;
+        }
       }
-    }
-  
+
     @media (max-width: 853px) {
         div.pricing-outer {
             display: block;
             width: 100%;
             min-width: 1px;
         }
-        
+
         div.pricing-inner {
-            width: 90%;
-            max-width: 400px;
-            min-width: 1px;
+            padding: 5% 10%;
         }
-    }    
-      
+    }
+
   }
 }

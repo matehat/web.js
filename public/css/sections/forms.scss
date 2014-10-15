@@ -7,7 +7,7 @@
     overflow: hidden;
     z-index: 90;
     position: relative;
-    border-top: 15px solid white;
+    border-top: 2px solid white;
 
     &.visible { height: 165px; }
 
@@ -55,8 +55,8 @@
       }
 
       &.invalid.email {
-        input[name="email"] { 
-          border-color: #E03C33; 
+        input[name="email"] {
+          border-color: #E03C33;
         }
       }
 
@@ -173,16 +173,16 @@
         transition-property: opacity;
         transition-duration: 0.5s;
       }
-      p.success { 
+      p.success {
         display: block;
-        opacity: 1 
+        opacity: 1
       }
       a.submit, input { opacity: 0 }
     }
 
-    @media (max-width: 596px) { 
+    @media (max-width: 596px) {
       input[type="text"], input[type="email"] {
-        width: 75%; 
+        width: 75%;
       }
     }
   }
