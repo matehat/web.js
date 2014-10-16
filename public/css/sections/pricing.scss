@@ -26,6 +26,10 @@
         min-width: 410px;
         width: 50%;
         font-size: 16px;
+
+        &:hover ul li {
+          color: #fff;
+        }
       }
 
       #prix-groupe {
@@ -38,6 +42,10 @@
           background-color: rgba(#68BB45, 0.65);
           border-color: #68BB45;
         }
+
+        &:hover .price-detail {
+          background-color: #68BB45;
+        }
       }
 
       #prix-entreprise {
@@ -49,6 +57,10 @@
         .price-detail {
           background-color: rgba(#F3BC19, 0.65);
           border-color: #F3BC19;
+        }
+
+        &:hover .price-detail {
+          background-color: #F3BC19;
         }
       }
 
@@ -98,6 +110,9 @@
           border-radius: 18px;
           border: 1px solid #eee;
           font-weight: bold;
+
+          transition-duration: 1s;
+          transition-property: background-color;
         }
 
         > p {
@@ -124,9 +139,11 @@
           font-family: adelle;
           margin-bottom: 20px;
           text-align: center;
-          color: #ddd;
+          color: #ccc;
           font-size: 120%;
           line-height: 130%;
+          transition-property: color;
+          transition-duration: 1s;
         }
       }
 

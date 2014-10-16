@@ -1,6 +1,6 @@
 #main {
   #signup-form {
-    background-color: #333;
+    background-color: white;
     transition-duration: 0.3s;
     transition-property: height;
     height: 0;
@@ -12,9 +12,9 @@
     &.visible { height: 165px; }
 
     a.close {
-      color: rgba(255,255,255,0.5);
+      color: rgba(#3BBAE5,0.5);
 
-      &:hover { color: white; }
+      &:hover { color: #3BBAE5; }
 
       top: 20px;
       @media (max-width: 596px) {
@@ -39,6 +39,7 @@
         font-family: brandon-grotesque;
         text-align: center;
         z-index: 5;
+        background-color: #3BBAE5;
 
         &:focus { outline-width: 0; }
         &[name="name"] {
@@ -50,18 +51,23 @@
           border-top: 0;
 
           transition-duration: 0.2s;
-          transition-property: border-color;
+          transition-property: background-color;
         }
+
+        &::-webkit-input-placeholder { color: white; }
+        &:-moz-placeholder { color: white; }
+        &::-moz-placeholder { color: white; }
+        &:-ms-input-placeholder { color: white; }
       }
 
       &.invalid.email {
         input[name="email"] {
-          border-color: #E03C33;
+          background-color: #F08921;
         }
       }
 
       a.submit {
-        color: white;
+        color: #3BBAE5;
         font-family: brandon-grotesque;
         font-weight: bold;
         display: inline-block;
