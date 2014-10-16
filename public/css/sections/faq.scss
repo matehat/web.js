@@ -30,6 +30,11 @@
       padding-left: 5%;
     }
     
+    div.faq-row-subtitle {
+      padding: 3.5% 0;
+      padding-left: 0%;
+    }
+    
     div.faq-colomn {
       display: inline-block;
       padding: 0 3.5% 0 0;
@@ -38,7 +43,29 @@
       vertical-align: top;
     }
 
-    h2.question {
+    h2.question-1 {
+      display: block;
+      width: 95%;
+      font-size: 20px;
+      font-family: "brandon-grotesque";
+      font-weight: 600;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    
+    h2.question-2 {
+      display: block;
+      width: 95%;
+      font-size: 20px;
+      font-family: "brandon-grotesque";
+      font-weight: 600;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    
+    h2.faq-subtitle {
       display: block;
       width: 95%;
       font-size: 20px;
@@ -48,7 +75,7 @@
       text-transform: uppercase;
     }
       
-    p.response {
+    p.response-1 {
       margin: 1em 0 0;
       width: 95%;
       padding: 0;
@@ -56,7 +83,20 @@
       font-size: 16px;
       font-family: "adelle";
       line-height: 1.25;
+      text-align:right;
     }
+    
+    p.response-2 {
+      margin: 1em 0 0;
+      width: 95%;
+      padding: 0;
+      display: block;
+      font-size: 16px;
+      font-family: "adelle";
+      line-height: 1.25;
+      text-align:left;
+    }
+    
     
     @media (max-width: 768px) {
       p.response { margin: 0.5em 0 0; }
@@ -68,6 +108,7 @@
         padding: 0 10px 40px 0; 
         display: block;
         width: 100%;
+        h2.question-1, p.response-1 {text-align:left;}
       }
     }
       
