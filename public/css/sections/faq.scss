@@ -68,11 +68,12 @@
     h2.faq-subtitle {
       display: block;
       width: 95%;
-      font-size: 20px;
+      font-size: 300%;
       font-family: "brandon-grotesque";
-      font-weight: 600;
+      font-weight: 300;
       line-height: 1.25;
       text-transform: uppercase;
+      text-align:center;
     }
       
     p.response-1 {
@@ -109,6 +110,9 @@
         display: block;
         width: 100%;
         h2.question-1, p.response-1 {text-align:left;}
+      }
+      div.faq-row-subtitle {
+        padding: 5px 0 30px 0;
       }
     }
       

@@ -471,7 +471,7 @@ body > nav {
       top: 500px; } }
 
 #main #signup-form {
-  background-color: #333;
+  background-color: white;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transition-property: height;
@@ -484,10 +484,10 @@ body > nav {
   #main #signup-form.visible {
     height: 165px; }
   #main #signup-form a.close {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(59, 186, 229, 0.5);
     top: 20px; }
     #main #signup-form a.close:hover {
-      color: white; }
+      color: #3BBAE5; }
     @media (max-width: 596px) {
       #main #signup-form a.close {
         right: -3px;
@@ -506,7 +506,8 @@ body > nav {
       text-transform: uppercase;
       font-family: brandon-grotesque;
       text-align: center;
-      z-index: 5; }
+      z-index: 5;
+      background-color: #3BBAE5; }
       #main #signup-form form input:focus {
         outline-width: 0; }
       #main #signup-form form input[name="name"] {
@@ -517,12 +518,20 @@ body > nav {
         border-top: 0;
         -webkit-transition-duration: 0.2s;
                 transition-duration: 0.2s;
-        -webkit-transition-property: border-color;
-                transition-property: border-color; }
+        -webkit-transition-property: background-color;
+                transition-property: background-color; }
+      #main #signup-form form input::-webkit-input-placeholder {
+        color: white; }
+      #main #signup-form form input:-moz-placeholder {
+        color: white; }
+      #main #signup-form form input::-moz-placeholder {
+        color: white; }
+      #main #signup-form form input:-ms-input-placeholder {
+        color: white; }
     #main #signup-form form.invalid.email input[name="email"] {
-      border-color: #E03C33; }
+      background-color: #F08921; }
     #main #signup-form form a.submit {
-      color: white;
+      color: #3BBAE5;
       font-family: brandon-grotesque;
       font-weight: bold;
       display: inline-block;
@@ -1214,6 +1223,8 @@ body > nav {
     min-width: 410px;
     width: 50%;
     font-size: 16px; }
+    #main #pricing .pricing-outer:hover ul li {
+      color: #fff; }
   #main #pricing #prix-groupe {
     float: left; }
     #main #pricing #prix-groupe .price-1 {
@@ -1221,6 +1232,8 @@ body > nav {
     #main #pricing #prix-groupe .price-detail {
       background-color: rgba(104, 187, 69, 0.65);
       border-color: #68BB45; }
+    #main #pricing #prix-groupe:hover .price-detail {
+      background-color: #68BB45; }
   #main #pricing #prix-entreprise {
     float: right; }
     #main #pricing #prix-entreprise .price-1 {
@@ -1228,6 +1241,8 @@ body > nav {
     #main #pricing #prix-entreprise .price-detail {
       background-color: rgba(243, 188, 25, 0.65);
       border-color: #F3BC19; }
+    #main #pricing #prix-entreprise:hover .price-detail {
+      background-color: #F3BC19; }
   #main #pricing .pricing-inner {
     height: 100%;
     margin: 0 auto;
@@ -1267,7 +1282,11 @@ body > nav {
       padding: 5px 0;
       border-radius: 18px;
       border: 1px solid #eee;
-      font-weight: bold; }
+      font-weight: bold;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s;
+      -webkit-transition-property: background-color;
+              transition-property: background-color; }
     #main #pricing .pricing-inner > p {
       font-family: adelle;
       opacity: 0.6;
@@ -1286,9 +1305,13 @@ body > nav {
       font-family: adelle;
       margin-bottom: 20px;
       text-align: center;
-      color: #ddd;
+      color: #ccc;
       font-size: 120%;
-      line-height: 130%; }
+      line-height: 130%;
+      -webkit-transition-property: color;
+              transition-property: color;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s; }
   @media (max-width: 853px) {
     #main #pricing:after {
       opacity: 0; }
@@ -1358,11 +1381,12 @@ body > nav {
     #faq-main #faq h2.faq-subtitle {
       display: block;
       width: 95%;
-      font-size: 20px;
+      font-size: 300%;
       font-family: "brandon-grotesque";
-      font-weight: 600;
+      font-weight: 300;
       line-height: 1.25;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center; }
     #faq-main #faq p.response-1 {
       margin: 1em 0 0;
       width: 95%;
@@ -1392,7 +1416,9 @@ body > nav {
         display: block;
         width: 100%; }
         #faq-main #faq div.faq-colomn h2.question-1, #faq-main #faq div.faq-colomn p.response-1 {
-          text-align: left; } }
+          text-align: left; }
+      #faq-main #faq div.faq-row-subtitle {
+        padding: 5px 0 30px 0; } }
   @media (max-width: 768px) {
     #faq-main {
       top: 225px; } }
