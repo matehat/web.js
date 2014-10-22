@@ -1305,7 +1305,8 @@ body > nav {
           margin-top: 100px; } }
 
 body.faq nav {
-  border-bottom: 0; }
+  border-bottom: 0;
+  overflow: visible; }
   body.faq nav .back {
     display: none; }
   @media (max-width: 768px) {
@@ -1314,7 +1315,9 @@ body.faq nav {
   @media (max-width: 596px) {
     body.faq nav .back {
       display: block;
-      top: 5000px;
+      top: 0;
+      left: 5000px;
+      white-space: nowrap;
       position: absolute;
       color: white;
       font-family: "brandon-grotesque";

@@ -137,6 +137,7 @@
 body.faq {
   nav {
     border-bottom: 0;
+    overflow: visible;
 
     .back { display: none; }
 
@@ -146,7 +147,9 @@ body.faq {
     @media (max-width: 596px) {
       .back {
         display: block;
-        top: 5000px;
+        top: 0;
+        left: 5000px;
+        white-space: nowrap;
         position: absolute;
         color: white;
         font-family: "brandon-grotesque";
