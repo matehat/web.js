@@ -1,3 +1,7 @@
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
+
 #top {
   transition-delay: 0s;
   transition-duration: 0s;
@@ -154,18 +158,35 @@
   @media (max-width: 596px) {
     height: 480px;
 
-    header {
+    header.hero {
       font-size: 90%;
       width: 90%;
+      top: 20px;
+      position: relative;
 
-      img { display: none; }
+      img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -48px;
+        margin-left: -54px;
+        width: 120px;
+        height: 160px;
+        z-index: 0;
+        opacity: 0.3;
+        filter: grayscale(100%);
+      }
       h1, h2, p {
         margin-left: 0;
         text-align: center;
       }
+      h1 {
+        position: relative;
+        z-index: 1;
+      }
       h2 {
         margin-bottom: 50px;
-        opacity: 0.5;
+        opacity: 0.7;
       }
     }
   }
