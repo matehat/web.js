@@ -21,13 +21,18 @@ $(function () {
 
   if ($faqTitle.length) {
     var faqTitleMaxScroll = $main.position().top / 2;
+    var lastScroll;
     (function animLoop(){
       window.requestAnimFrame(animLoop);
-      var pc = (faqTitleMaxScroll - $(window).scrollTop()) / faqTitleMaxScroll;
+      if (lastScroll === $(window).scrollTop()) {
+        return;
+      }
+      lastScroll = $(window).scrollTop();
+      var pc = (faqTitleMaxScroll - lastScroll) / faqTitleMaxScroll;
       $faqTitle.css("opacity", Math.min(1, Math.max(0, pc)));
       $faqBg.css("opacity", Math.min(1, Math.max(0, 0 - 1 * pc)) )
-      $nav.css("top", Math.min(0, -$(window).scrollTop()) + "px");
-      $topIcon.css("top", 10 + Math.min(0, -$(window).scrollTop()) + "px");
+      $nav.css("top", Math.min(0, -lastScroll) + "px");
+      $topIcon.css("top", 10 + Math.min(0, -lastScroll) + "px");
     })()
   }
 
