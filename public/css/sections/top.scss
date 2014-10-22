@@ -3,7 +3,7 @@
   transition-duration: 0s;
   transition-property: none;
   transition-timing-function: ease;
-  background-image:  linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)), url(/img/class.jpg);
+  background-image:  linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)), url(/img/top-image.jpg);
   background-position: 50% 0%;
   background-size: cover;
   box-sizing: border-box;
@@ -31,7 +31,7 @@
       color: white;
       text-align: left;
       margin-left: 225px;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.2), 
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2),
                    0 2px 3px rgba(0,0,0,0.1);
     }
     h1 {
@@ -121,7 +121,7 @@
   }
 
   @media (min-width: 769px) { min-height: 600px }
-  @media (max-width: 768px) { 
+  @media (max-width: 768px) {
     height: 640px;
 
     header {

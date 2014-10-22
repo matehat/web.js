@@ -1,21 +1,197 @@
+#top-faq {
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transition-property: none;
+  transition-timing-function: ease;
+  background-image:  linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/img/faq-image.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -200px;
+  right: 0;
+  text-align: center;
+  z-index: 150;
+
+  header {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+
+    h2 {
+      color: white;
+      font-family: "brandon-grotesque", sans-serif;
+      text-transform: uppercase;
+      font-size: 300%;
+      margin-top: 150px;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2),
+                   0 2px 3px rgba(0,0,0,0.1);
+    }
+    p {
+      font-family: "adelle";
+      font-size: 130%;
+      margin: 0;
+      clear: left;
+      text-align: center;
+      font-style: italic;
+      line-height: 140%;
+
+      strong {
+        border-bottom: 1px solid white;
+        border-bottom-color: rgba(255,255,255,0.3);
+      }
+    }
+
+    &.hero img {
+      height: 175px;
+      width: 130px;
+      float: left;
+      margin-top: 85px;
+      margin-bottom: 0px;
+    }
+
+    .call-to-action {
+      margin-top: 20px;
+
+      a {
+        display: inline-block;
+        color: rgba(255,255,255,0.6);
+        font-family: "brandon-grotesque";
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 15px;
+        border: 1px solid rgba(255,255,255,0.2);;
+        border-radius: 2px;
+        font-size: 120%;
+        transition-property: border, background-color, color;
+        transition-duration: 0.2s;
+        background-color: rgba(255,255,255,0.2);
+
+        strong {
+          font-weight: bold;
+          color: white;
+          transition-property: color;
+          transition-duration: 0.2s;
+        }
+
+        &:first-child { margin-right: 10px; }
+        &:hover {
+          background-color: white;
+          border-color: white;
+          color: black;
+
+          strong { color: black; }
+        }
+
+        &[href="#groupe"]:hover {
+          background-color: #65BA59;
+          border-color: #65BA59;
+        }
+        &[href="#entreprise"]:hover {
+          background-color: #65BA59;
+          border-color: #65BA59;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    min-height: 275px
+  }
+  @media (max-width: 768px) {
+    header {
+      width: 440px;
+
+      h2 {
+        font-size: 200%;
+      }
+
+      > p { margin-bottom: 20px; }
+
+      div.call-to-action a,
+      div.call-to-action a:first-child {
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+  @media (max-width: 596px) {
+    position: absolute;
+    height: 150%;
+
+    header {
+      width: 90%;
+      h2 {
+        margin-bottom: 50px;
+        opacity: 0.5;
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+body.faq {
+  nav {
+    border-bottom: 0;
+
+    .back { display: none; }
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+    @media (max-width: 596px) {
+      .back {
+        display: block;
+        top: 5000px;
+        position: absolute;
+        color: white;
+        font-family: "brandon-grotesque";
+        text-transform: uppercase;
+        font-size: 130%;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 20px;
+        z-index: 0;
+
+        i {
+          font-size: 110%;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
 #faq-main {
   position: absolute;
-  top: 275px;
+  top: 215px;
   width: 100%;
+  z-index: 180;
+
   #faq {
     width: 100%;
     box-sizing: border-box;
-    background-color: white;
-    border-color: white;
-    border-style: solid;
-    border-width: 0px 15px 0px 15px;
     height: 100%;
     padding: 3.5% 0;
-    color: black;
+    color: white;
     position: relative;
     display: block;
-    
-  
+
+    .bg {
+      background-color: #65BA59;
+      position: fixed;
+      top: 0;
+      bottom: -200px;
+      left: 0;
+      right: 0;
+      content: " ";
+      z-index: 1;
+    }
+
     .wrapper {
       max-width: 1100px;
       width: 100%;
@@ -23,18 +199,20 @@
       font-family: Helvetica, Arial;
       font-size: 16px;
       line-height: 1.5;
+      position: relative;
+      z-index: 2;
     }
-    
+
     div.faq-row {
       padding: 3.5% 0;
       padding-left: 5%;
     }
-    
+
     div.faq-row-subtitle {
       padding: 3.5% 0;
       padding-left: 0%;
     }
-    
+
     div.faq-colomn {
       display: inline-block;
       padding: 0 3.5% 0 0;
@@ -53,7 +231,7 @@
       text-transform: uppercase;
       text-align: right;
     }
-    
+
     h2.question-2 {
       display: block;
       width: 95%;
@@ -64,7 +242,7 @@
       text-transform: uppercase;
       text-align: left;
     }
-    
+
     h2.faq-subtitle {
       display: block;
       width: 95%;
@@ -75,7 +253,7 @@
       text-transform: uppercase;
       text-align:center;
     }
-      
+
     p.response-1 {
       margin: 1em 0 0;
       width: 95%;
@@ -86,7 +264,7 @@
       line-height: 1.25;
       text-align:right;
     }
-    
+
     p.response-2 {
       margin: 1em 0 0;
       width: 95%;
@@ -97,16 +275,16 @@
       line-height: 1.25;
       text-align:left;
     }
-    
-    
+
+
     @media (max-width: 768px) {
       p.response { margin: 0.5em 0 0; }
-      div.faq-row { 
-        padding: 0 0; 
+      div.faq-row {
+        padding: 0 0;
         padding-left: 5%;
       }
-      div.faq-colomn { 
-        padding: 0 10px 40px 0; 
+      div.faq-colomn {
+        padding: 0 10px 40px 0;
         display: block;
         width: 100%;
         h2.question-1, p.response-1 {text-align:left;}
@@ -115,11 +293,15 @@
         padding: 5px 0 30px 0;
       }
     }
-      
+
   }
-  
+
   @media (max-width: 768px) { top: 225px; }
-  @media (max-width: 596px) { top: 175px; }
-  
+  @media (max-width: 596px) {
+    top: 175px;
+    #faq div.faq-colomn {
+      padding-right: 0;
+    }
+  }
+
 }
-  

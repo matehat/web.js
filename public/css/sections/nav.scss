@@ -26,7 +26,7 @@ body {
 
   &.anchored  a#top-icon,
   &.faq       a#top-icon,
-  &.anchored  a#top-icon:hover, 
+  &.anchored  a#top-icon:hover,
   &.faq       a#top-icon:hover { color: black }
               a#top-icon:hover { color: white }
 
@@ -67,7 +67,7 @@ body {
         font-size: 120%;
         font-family: adelle;
         line-height: 48px;
-        margin: 10px; 
+        margin: 10px;
         border-bottom: 2px solid transparent;
         transition-property: border-color;
         transition-duration: 0.2s;
@@ -86,17 +86,18 @@ body {
     }
   }
 
-  @media (max-width: 768px) { 
+  @media (max-width: 768px) {
       > a#top-icon {
         position: absolute;
-        top: -5000px;
+        left: -5000px;
       }
   }
-      
+
   @media (max-width: 596px) {
     > nav, a#top-icon {
       position: absolute;
-      top: -5000px;
+      left: -5000px;
+      right: 5000px;
     }
   }
 }

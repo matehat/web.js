@@ -32,10 +32,20 @@
         }
       }
 
+      a.faq {
+        display: block;
+        text-align: center;
+        font-family: adelle;
+        font-style: italic;
+        font-size: 110%;
+        padding: 10px 0;
+      }
+
       #prix-groupe {
         float: left;
 
-        .price-1 {
+        .price-1,
+        a.faq {
           color: #68BB45;
         }
         .price-detail {
@@ -51,7 +61,8 @@
       #prix-entreprise {
         float: right;
 
-        .price-1 {
+        .price-1,
+        a.faq {
           color: #F3BC19;
         }
         .price-detail {
@@ -157,15 +168,28 @@
         float: none;
       }
 
-        div.pricing-outer {
-            display: block;
-            width: 100%;
-            min-width: 1px;
-        }
+      div.pricing-outer {
+          display: block;
+          width: 100%;
+          min-width: 1px;
+      }
 
-        div.pricing-inner {
-            padding: 5% 10%;
+      div.pricing-inner {
+          padding: 5% 10%;
+      }
+    }
+
+    @media (max-width: 596px) {
+      .pricing-inner {
+        font-size: 88%;
+
+        .pricing-title {
+          font-size: 240%;
         }
+        .price-detail {
+          margin: 1em 20px 0;
+        }
+      }
     }
 
   }

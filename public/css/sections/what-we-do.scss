@@ -7,7 +7,7 @@
 
     @media (min-width: 769px) {
       height: 600px;
-      background-image: url(/img/teach.jpg);
+      background-image: url(/img/content-image.jpg);
     }
     @media (max-width: 768px) {
       background-image: none;
@@ -31,7 +31,7 @@
         height: 100%;
       }
 
-      &#groupe:hover, 
+      &#groupe:hover,
       &#entreprise:hover { background-color: rgba(0,0,0,0.3); }
       &#entreprise { background-color: rgba(0,0,0,0.2); }
 

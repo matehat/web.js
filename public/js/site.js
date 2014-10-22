@@ -1,37 +1,57 @@
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
 $(function () {
-  // var $main = $('#main');
-  // $(window).resize(function (e) {
-  //   var height = window.innerHeight;
-  //   if (height < 660) {
-  //     $main.css('top', '660px');
-  //   } else {
-  //     $main.css('top', '');
-  //   }
-  // });
-  
   var transitionTime = 0;
+  var $body = $('body');
+  var $main = $('#main, #faq-main');
+  var $whoWeAre = $('#who-we-are');
+  var $nav = $('nav');
+  var $window = $(window);
+  var $faqTitle = $("#top-faq h2");
+  var $faqBg = $("#faq .bg");
+  var $topIcon = $("#top-icon");
+
+  if ($faqTitle.length) {
+    var faqTitleMaxScroll = $main.position().top / 2;
+    (function animLoop(){
+      window.requestAnimFrame(animLoop);
+      var pc = (faqTitleMaxScroll - $(window).scrollTop()) / faqTitleMaxScroll;
+      $faqTitle.css("opacity", Math.min(1, Math.max(0, pc)));
+      $faqBg.css("opacity", Math.min(1, Math.max(0, 0 - 1 * pc)) )
+      $nav.css("top", Math.min(0, -$(window).scrollTop()) + "px");
+      $topIcon.css("top", 10 + Math.min(0, -$(window).scrollTop()) + "px");
+    })()
+  }
+
   function scrolled() {
-    var $body = $('body');
     if (Date.now() - transitionTime <= 200) return;
-    var distance = $(window).scrollTop() - ($('#main').position().top / 2);
-    if ($body.hasClass('anchored') && distance < -50) {
+    var distance = $window.scrollTop() - ($main.position().top / 2);
+    if (!$faqTitle.length && $body.hasClass('anchored') && distance < -50) {
       $body.removeClass('anchored');
-      $('nav').fadeOut(500);
+      $nav.fadeOut(500);
       transitionTime = Date.now();
     } else if (!$body.hasClass('anchored') && distance >= 0) {
       $body.addClass('anchored');
-      $('nav').fadeIn(500);
+      $nav.fadeIn(500);
       transitionTime = Date.now();
     }
-    
-    distance = $(window).scrollTop() - ($('#main').position().top * 2 / 3);
-    if (!$('#who-we-are').hasClass('colored') && distance >= 0) {
-      $('#who-we-are').addClass('colored');
+
+    distance = $(window).scrollTop() - ($main.position().top * 2 / 3);
+    if (!$whoWeAre.hasClass('colored') && distance >= 0) {
+      $whoWeAre.addClass('colored');
     }
   }
 
   window.onscroll = scrolled;
-  
+
   $('body')
     .on('click', 'a[href="#join-us"], li.join-us', function (ev) {
       ev.preventDefault();
@@ -44,16 +64,21 @@ $(function () {
       $('#team').removeClass('joining');
     })
     .on('click', 'a[href^="#"]', function (ev) {
-      if ($(this).attr('href') == '#') 
+      var href = $(this).attr('href');
+      if (href == '#')
         return;
-      $.scrollTo($(this).attr('href'), 500, {
+      $.scrollTo(href, 500, {
         offset: {top: -67},
-        easing: 'easeOutQuint'
+        easing: 'easeOutQuint',
+        onAfter: function() {
+          if (["#groupe", "#entreprise"].indexOf(href) !== -1) {
+            $(href).trigger("click");
+          }
+        }
       });
       ev.preventDefault();
     })
     .on('click', '#what-we-do article a.close', function(ev) {
-      console.log('!', this);
       ev.preventDefault();
       ev.stopImmediatePropagation();
       $('#what-we-do').attr('data-active', 'none');
@@ -65,7 +90,6 @@ $(function () {
     })
     .on('click', '#what-we-do article', function (e) {
       e.preventDefault();
-      console.log('!', this);
       $(this).closest('#what-we-do').attr('data-active', $(this).attr('id'));
     })
     .on('click', 'form a.submit', function(e) {
@@ -73,7 +97,7 @@ $(function () {
       var form = $(this).closest('form');
       var btn = $(this);
 
-      if (btn.data('loading')) 
+      if (btn.data('loading'))
         return;
 
       btn.data('loading', true);
@@ -88,6 +112,6 @@ $(function () {
       $(this).fadeOut(50);
       $('#signup-form').addClass('visible');
     });
-  
+
   scrolled();
 });
