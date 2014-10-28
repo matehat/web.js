@@ -1,13 +1,13 @@
 #main {
   #what-we-do {
     width: 100%;
+    background-image: url(/img/content-image.jpg);
     background-position: 30% 0%;
     background-size: cover;
     position: relative;
 
     @media (min-width: 769px) {
       height: 600px;
-      background-image: url(/img/content-image.jpg);
     }
     @media (max-width: 768px) {
       background-image: none;
@@ -96,6 +96,7 @@
       }
 
       a.close {
+        color: #fff;
         color: rgba(255,255,255,0.8);
         opacity: 0;
       }
@@ -165,6 +166,7 @@
 
     &[data-active="groupe"] article#groupe,
     &[data-active="entreprise"] article#entreprise {
+      background-color: #3B56E5;
       background-color: rgba(59, 186, 229, 0.9);
       header i, .show-details { opacity: 0 }
       ul li {

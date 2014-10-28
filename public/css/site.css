@@ -165,8 +165,10 @@ body > nav {
   left: 0;
   right: 0;
   height: 68px;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 200;
+  border-bottom: 1px solid #eee;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   text-align: right; }
   body > nav ul {
@@ -390,6 +392,7 @@ body > nav {
   #main #signup-form.visible {
     height: 165px; }
   #main #signup-form a.close {
+    color: #3BBAE5;
     color: rgba(59, 186, 229, 0.5);
     top: 20px; }
     #main #signup-form a.close:hover {
@@ -709,19 +712,20 @@ body > nav {
     #main #material ul li {
       width: 100%; }
       #main #material ul li:nth-child(3) {
+        border-bottom: 1px solid #fff;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
       #main #material ul li:nth-child(4) {
         padding-bottom: 0; } }
 
 #main #what-we-do {
   width: 100%;
+  background-image: url(/img/content-image.jpg);
   background-position: 30% 0%;
   background-size: cover;
   position: relative; }
   @media (min-width: 769px) {
     #main #what-we-do {
-      height: 600px;
-      background-image: url(/img/content-image.jpg); } }
+      height: 600px; } }
   @media (max-width: 768px) {
     #main #what-we-do {
       background-image: none;
@@ -801,6 +805,7 @@ body > nav {
       -moz-box-sizing: border-box;
            box-sizing: border-box; }
     #main #what-we-do article a.close {
+      color: #fff;
       color: rgba(255, 255, 255, 0.8);
       opacity: 0; }
     @media (min-width: 769px) {
@@ -865,6 +870,7 @@ body > nav {
         position: relative;
         top: 10px; } }
   #main #what-we-do[data-active="groupe"] article#groupe, #main #what-we-do[data-active="entreprise"] article#entreprise {
+    background-color: #3B56E5;
     background-color: rgba(59, 186, 229, 0.9); }
     #main #what-we-do[data-active="groupe"] article#groupe header i, #main #what-we-do[data-active="groupe"] article#groupe .show-details, #main #what-we-do[data-active="entreprise"] article#entreprise header i, #main #what-we-do[data-active="entreprise"] article#entreprise .show-details {
       opacity: 0; }
@@ -1143,6 +1149,7 @@ body > nav {
     #main #pricing #prix-groupe .price-1, #main #pricing #prix-groupe a.faq {
       color: #68BB45; }
     #main #pricing #prix-groupe .price-detail {
+      background-color: #68BB45;
       background-color: rgba(104, 187, 69, 0.65);
       border-color: #68BB45; }
     #main #pricing #prix-groupe:hover .price-detail {
@@ -1152,6 +1159,7 @@ body > nav {
     #main #pricing #prix-entreprise .price-1, #main #pricing #prix-entreprise a.faq {
       color: #F3BC19; }
     #main #pricing #prix-entreprise .price-detail {
+      background-color: #F3BC19;
       background-color: rgba(243, 188, 25, 0.65);
       border-color: #F3BC19; }
     #main #pricing #prix-entreprise:hover .price-detail {
@@ -1301,6 +1309,7 @@ body > nav {
       margin-top: 20px; }
       #top-faq header .call-to-action a {
         display: inline-block;
+        color: #ccc;
         color: rgba(255, 255, 255, 0.6);
         font-family: "brandon-grotesque";
         text-transform: uppercase;
@@ -1313,6 +1322,7 @@ body > nav {
                 transition-property: border, background-color, color;
         -webkit-transition-duration: 0.2s;
                 transition-duration: 0.2s;
+        background-color: #fff;
         background-color: rgba(255, 255, 255, 0.2); }
         #top-faq header .call-to-action a strong {
           font-weight: bold;

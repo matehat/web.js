@@ -60,16 +60,18 @@
 
       a {
         display: inline-block;
+        color: #ccc;
         color: rgba(255,255,255,0.6);
         font-family: "brandon-grotesque";
         text-transform: uppercase;
         text-decoration: none;
         padding: 10px 15px;
-        border: 1px solid rgba(255,255,255,0.2);;
+        border: 1px solid rgba(255,255,255,0.2);
         border-radius: 2px;
         font-size: 120%;
         transition-property: border, background-color, color;
         transition-duration: 0.2s;
+        background-color: #fff;
         background-color: rgba(255,255,255,0.2);
 
         strong {
