@@ -3,7 +3,8 @@
   transition-duration: 0s;
   transition-property: none;
   transition-timing-function: ease;
-  background-image:  linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/img/faq-image.jpg);
+  background-image: url(/img/faq-image.jpg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/img/faq-image.jpg);
   background-position: 50% 50%;
   background-size: cover;
   box-sizing: border-box;

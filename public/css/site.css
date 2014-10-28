@@ -1252,6 +1252,7 @@ body > nav {
           transition-property: none;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
+  background-image: url(/img/faq-image.jpg);
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/img/faq-image.jpg);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/img/faq-image.jpg);
   background-position: 50% 50%;
