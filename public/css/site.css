@@ -215,6 +215,7 @@ body > nav {
           transition-property: none;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
+  background-image: url(/img/top-image.jpg);
   background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5)), url(/img/top-image.jpg);
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)), url(/img/top-image.jpg);
   background-position: 50% 0%;

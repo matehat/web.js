@@ -7,7 +7,8 @@
   transition-duration: 0s;
   transition-property: none;
   transition-timing-function: ease;
-  background-image:  linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)), url(/img/top-image.jpg);
+  background-image: url(/img/top-image.jpg);
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)), url(/img/top-image.jpg);
   background-position: 50% 0%;
   background-size: cover;
   box-sizing: border-box;
