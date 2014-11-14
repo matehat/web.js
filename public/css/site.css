@@ -76,6 +76,9 @@ input, select {
 [hidden] {
   display: none; }
 
+ul {
+  list-style: none; }
+
 div.container {
   width: 1000px; }
   @media (max-width: 1080px) {
