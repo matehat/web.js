@@ -26,6 +26,13 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
 
+  span.nowrap {
+    white-space: nowrap;
+  }
+  span.petit-espace {
+    font-size: 60%;
+  }
+
   a.close {
     position: absolute;
     text-decoration: none;
