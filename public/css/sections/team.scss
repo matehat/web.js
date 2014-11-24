@@ -10,7 +10,7 @@
 
         li {
           display: inline-block;
-          width: 25%;
+          width: 20%;
           text-align: center;
           padding: 10px;
           box-sizing: border-box;
@@ -173,7 +173,7 @@
         &:hover { color: #999 }
       }
     }
-    
+
     .contact-us {
       border-top: 1px solid #ddd;
       padding-top: 20px;
@@ -182,13 +182,13 @@
       line-height: 150%;
       width: 400px;
       margin: 0 auto;
-      
+
       font-family: "brandon-grotesque";
       text-transform: uppercase;
       font-weight: bold;
       font-size: 150%;
       color: #888;
-      
+
       a,
       a:hover,
       a:active {
@@ -196,18 +196,18 @@
         text-decoration: none;
       }
     }
-    
+
     #call-us {
       position: relative;
       left: 5px;
       margin-bottom: 10px;
       display: inline-block;
     }
-    
+
     i.call-us {
       font-size: 130%;
     }
-    
+
     #email-us {
       font-size: 93%;
     }
