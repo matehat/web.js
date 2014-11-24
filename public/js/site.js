@@ -53,6 +53,8 @@ $(function () {
   var $faqTitle = $("#top-faq h2");
   var $faqBg = $("#faq .bg");
   var $topIcon = $("#top-icon");
+  
+  var temp = ["mai", "l", "to"];
 
   if ($faqTitle.length) {
     var faqTitleMaxScroll = $main.position().top / 2;
@@ -118,6 +120,9 @@ $(function () {
       });
       ev.preventDefault();
     })
+    .on('focus', "#team input", function (ev) {
+      $('#team').addClass("joining");
+    })
     .on('click', '#what-we-do article a.close', function(ev) {
       ev.preventDefault();
       ev.stopImmediatePropagation();
@@ -146,6 +151,14 @@ $(function () {
         form.attr('class', data.msg);
         btn.data('loading', false);
       });
+    })
+    .on('click', '#email-us', function(ev) {
+      var parts = ["contact", "sakado"];
+      var string = [parts.join("@"), "com"].join(".");
+      var lk = $(this).attr("href", temp.join("") + ":" + string);
+      setTimeout(function () {
+        lk.attr("href", "#");
+      }, 0);
     })
     .on('click', 'a.sign-up', function(e) {
       e.preventDefault();
