@@ -154,7 +154,7 @@ $(function () {
     })
     .on('click', '#email-us', function(ev) {
       var parts = ["contact", "sakado"];
-      var string = [parts.join("@"), "com"].join(".");
+      var string = [parts.join("@"), "ca"].join(".");
       var lk = $(this).attr("href", temp.join("") + ":" + string);
       setTimeout(function () {
         lk.attr("href", "#");
